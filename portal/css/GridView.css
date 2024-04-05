@@ -1,0 +1,80 @@
+﻿TABLE.GridViewStyle caption				{padding:.2em;letter-spacing:.2em;text-transform: uppercase;text-align: left;}
+TABLE.GridViewStyle table					{border:1px solid #fff;}
+TABLE.GridViewStyle th
+{
+	background-color: #999999;
+	border: 1pt solid #ababab;
+	height: 10px;
+	vertical-align: middle;
+	font-family: Segoe UI, Arial, Helvetica, Verdana, MS Sans Serif;
+	font-size: 10px;
+	font-weight: bold;
+	letter-spacing: .2em;
+	color: #003300;
+	background-image: url( 'img/bg-menu.gif' );
+}
+TABLE.GridViewStyle tbody td, tbody th
+{
+	font-family: 'Courier New' , Courier, monospace;
+	font-size: 11px;
+	letter-spacing: .1em;
+	padding: .5em;
+	text-transform: uppercase;
+	text-align: left;
+}
+TABLE.GridViewStyle td					{ padding:0 10px; border-left: 1pt solid #c0c0c0; border-right: 1pt solid #ababab; border-top: 1pt solid #c0c0c0; border-bottom: 1pt solid #ababab}
+TABLE.GridViewStyle tbody tr				{ background:#EFEFEF;}
+TABLE.GridViewStyle tbody tr:hover			{ background:#c0c0c0;color:#000000;
+	background-color: #AEB8BF;
+	background-image: url("img/bg_sombra.gif" );
+	background-repeat: repeat-x;
+	background-position: center top;}
+TABLE.GridViewStyle tbody tr:hover a, tbody tr:hover a:visited{color:Red;}
+TABLE.GridViewStyle tr.alternate
+{
+	color: black;
+	background-color: #E0E0E0;
+}
+TABLE.GridViewStyle tr.normal:hover, 
+TABLE.GridViewStyle tr.alternate:hover
+{
+	background-color: #AEB8BF;
+	background-image: url("img/bg_sombra.gif" );
+	background-repeat: repeat-x;
+	background-position: center top;
+}
+TABLE.GridViewStyle tr.normal
+{
+	color: black;
+	background-color: #F1F1F1;
+}
+TABLE.GridViewStyle span1
+{
+	font-weight: bold;
+	color: #CC3300;
+}
+TABLE.GridViewStyle h2
+{
+	font-weight: bold;
+	color: #333300;
+	letter-spacing: .1em;
+}
+.GridViewStyle1 tr td, th, h2 .header
+{
+	clear: both;
+	font-family: Segoe UI, Arial, Helvetica, Verdana, MS Sans Serif;
+	height: 20px;
+	margin: 10px;
+	padding: 10px;
+	padding-left:5px;
+	font-weight: bold;
+	color: #CC3300;
+	letter-spacing: .2em;
+	vertical-align: middle;
+	background-color: #c1c1c1;
+	text-transform: uppercase;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #CCCCCC #666666 #666666 #CCCCCC;
+	text-align: center;
+}

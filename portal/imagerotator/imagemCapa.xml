@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<playlist version="1" xmlns="http://xspf.org/ns/0/">
+  <trackList>
+
+    <!--INFORMACOES E AVISOS -->
+    <track>
+      <title>Informações</title>
+	  <creator>Marcos M. Sousa</creator>
+      <location>imagerotator/imagemCapaBmcEmail.png</location>
+    </track>
+    <track>
+      <title>Informações</title>
+	  <creator>Marcos M. Sousa</creator>
+      <location>imagerotator/imagemCapaBmcInfo.png</location>
+      <info>ZonaPrincipal/MenuInformacao</info>
+    </track>
+
+	<!--SUPORTE -->
+    <track>
+      <title>SUPORTE</title>
+	  <creator>Marcos M. Sousa</creator>
+      <location>imagerotator/imagemCapaSuporte.png</location>
+	  <info>ZonaPrincipal/MenuSuporte/Suporte</info>	  
+    </track>
+	
+    <!--A EMPRESA CLIENTE-->
+    <track>
+	  <title>BARRETO</title>
+      <creator>Marcos M. Sousa</creator>
+      <location>imagerotator/imagemCapaBmc1.png</location>
+    </track>
+    <track>
+	  <title>BARRETO</title>
+      <creator>Marcos M. Sousa</creator>
+      <location>imagerotator/imagemCapaBmc2.png</location>
+    </track>
+
+    <!--CREDITOS -->
+    <track>
+	  <title>Definição</title>
+      <creator>Marcos M. Sousa</creator>
+      <location>imagerotator/imagemCapaDefinicao.png</location>
+      <info>ZonaSobre/definicao.aspx</info>
+    </track>
+	<track>
+	  <title>Tecnologias</title>
+      <creator>Marcos M. Sousa</creator>
+      <location>imagerotator/imagemCapaTecnologias.png</location>
+      <info>ZonaSobre/definicao.aspx</info>
+    </track>
+	<track>
+	  <title>Novidades</title>
+      <creator>Marcos M. Sousa</creator>
+      <location>imagerotator/imagemCapaNovidades.png</location>
+      <info>ZonaSobre/novidades.aspx</info>
+    </track>
+	<track>
+	  <title>Características</title>
+      <creator>Marcos M. Sousa</creator>
+      <location>imagerotator/imagemCapaCaracteristicas.png</location>
+      <info>ZonaSobre/caracteristicas.aspx</info>
+    </track>
+	
+	
+
+  </trackList>
+</playlist>

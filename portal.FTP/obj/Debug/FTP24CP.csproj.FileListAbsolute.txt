@@ -1,0 +1,8 @@
+L:\mmstec\PROJETOS\Solution Portal\portal.FTP\bin\Debug\FTP24CP.exe
+L:\mmstec\PROJETOS\Solution Portal\portal.FTP\bin\Debug\FTP24CP.pdb
+L:\mmstec\PROJETOS\Solution Portal\portal.FTP\obj\Debug\ResolveAssemblyReference.cache
+L:\mmstec\PROJETOS\Solution Portal\portal.FTP\obj\Debug\FTP24CP.Form1.resources
+L:\mmstec\PROJETOS\Solution Portal\portal.FTP\obj\Debug\FTP24CP.Properties.Resources.resources
+L:\mmstec\PROJETOS\Solution Portal\portal.FTP\obj\Debug\FTP24CP.csproj.GenerateResource.Cache
+L:\mmstec\PROJETOS\Solution Portal\portal.FTP\obj\Debug\FTP24CP.exe
+L:\mmstec\PROJETOS\Solution Portal\portal.FTP\obj\Debug\FTP24CP.pdb

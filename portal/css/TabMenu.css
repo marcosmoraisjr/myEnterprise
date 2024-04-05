@@ -1,0 +1,72 @@
+﻿div#TabMenudropdown
+{
+	background-color: Transparent;
+	position: relative;
+	margin: 0 0px 0 5px;
+	width: auto;
+	height: 16px;
+	vertical-align:middle;
+	z-index: 100;
+}
+
+div#Div1menudropdown,div#Div2menudropdown,div#Div3menudropdown
+{
+		clear:both;
+	background-color: #f1f1f1;
+	background:url("dropdown/themes/mmstec/images/globalnavbg.png") repeat-x;
+	position: relative;
+	margin: 0px;
+	width: auto;
+	height: 32px;
+	z-index: 100;
+}
+
+
+.Tab
+{
+	clear:both;
+	font-size:10px; 
+	background-position: center;
+	text-transform: uppercase;
+	margin-left : 5px;
+	margin-right : 10px;
+}
+	.Tab a
+	{
+		color: Gray;
+	}
+		.Tab a:hover
+		{
+			color: Green;
+			text-decoration: underline;
+		}
+
+
+.TabItem
+{
+	font-family: Arial, Helvetica, sans-serif;
+	font-family: Segoe UI, Arial, Helvetica, Verdana, MS Sans Serif;
+	letter-spacing: .1em;
+	color: Black;
+	background-color: transparent;/*#D8D8D8;*/
+	padding-left:5px;
+    padding-right:5px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+ 
+.TabSelecionado 
+{
+	font-size:11px; 
+	background-color: transparent;/*#D8D8D8;*/
+}
+	.TabSelecionado a
+	{
+		color: black;
+		text-decoration: none;
+	}
+		.TabSelecionado a:hover
+		{
+			color: Green;
+			text-decoration: underline;
+		}

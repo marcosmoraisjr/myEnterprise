@@ -1,0 +1,562 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="Portal.MasterPage" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--/
+==============================================================                                                                      
+PROJETO E DESENVOLVIMENTO: MARCOS MORAIS DE SOUSA
+CONTATO..................: MMSTEC@GMAIL.COM
+==============================================================
+/--> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+
+<!--/
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::                                                                      
+PROJETO E DESENVOLVIMENTO: MARCOS MORAIS DE SOUSA
+CONTATO: MMSTEC@GMAIL.COM
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+/--> 
+
+<head id="Head1" runat="server">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" /> 
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+    <meta http-equiv="Cache-Control" content="no-cache" /> 
+    <meta http-equiv="Expires" content="-1" /> 
+	<meta http-equiv="Page-Exit" content="blendTrans(Duration=0)" />
+    
+    <title>Tudo em um só lugar | Enterprise</title>
+    
+    <link href="css/principal.css" rel="stylesheet" type="text/css" />
+    <link href="css/aspnet.css" rel="stylesheet" type="text/css" />
+    <link href="css/RoundedCorn/RoundedCornr.css" rel="stylesheet" type="text/css" />
+    <link href="css/Info.css" rel="stylesheet" type="text/css" />
+    <link href="css/GridView.css" rel="stylesheet" type="text/css" />
+    <link href="css/TabMenu.css" rel="stylesheet" type="text/css" />
+    <link href="css/dropdown/dropdown.css" rel="stylesheet" type="text/css" />
+    <link href="css/dropdown/themes/mmstec/default.advanced.css" rel="stylesheet" type="text/css" />
+    <script src="js/jquery/jquery.dropdown.js" type="text/javascript"></script>
+    <script src="js/jquery/jquery.js" type="text/javascript"></script>
+    <script src="js/metodos.js" type="text/javascript"></script>
+    <script src="js/mascaras.js" type="text/javascript"></script>
+    
+      
+    <script type="text/javascript">
+        function desabilitar(object) {
+            window.status = "Aguarde...";
+            document.body.style.cursor = 'wait';
+            object.value = "Aguarde...";
+            object.style.cursor = 'wait';
+            object.disabled = true;
+        }
+    </script>
+    
+    <!--[if lte IE 7]>
+    <script type="text/javascript" src="js/jquery/jquery.js"></script>
+    <script type="text/javascript" src="js/jquery/jquery.dropdown.js"></script>
+    <![endif]-->
+    <!-- / END -->
+    
+     <style type="text/css">
+      .TabContainer
+      {
+         font: bold 0.75em Verdana;
+         width: 60em;
+         margin-top: 1.5em;
+         padding-top: 2em;
+      }
+      .TabItemInactive
+      {
+         border-top: 1px solid white;
+         border-left: 1px solid white;
+         border-right: 1px solid #aaaaaa;
+         border-bottom: none;      
+         background-color: #d3d3d3;  
+         text-align: center; 
+         text-decoration: none;
+         padding: 0.75em 0.25em 0 0.25em;
+      }
+
+      .TabItemInactive:hover
+      {
+         background: #808080;
+      }   
+      .TabItemActive
+      {     
+         border-top: 1px solid white;
+         border-left: none;
+         border-right: 1px solid #aaaaaa;
+         border-bottom: none;
+         text-decoration: none;
+         background-color: #bbbbbb;  
+         text-align: center;   
+         padding: 0.75em 0.25em 0 0.25em;
+      }
+
+      .ContentPanel
+      {
+         background-color: #bbbbbb; 
+         padding: 10px 10px 10px 10px;
+         width: 60em;
+         font: 0.8em Verdana;
+      }
+  </style>
+  
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+
+<body>
+    <form id="form1" runat="server">
+    
+    <!--/ DIV PRINCIPAL INICIO /-->
+    <div>
+    
+        <!--/ BARRA TOP INICIO /-->
+		<asp:Panel ID="PanelTopo" runat="server" HorizontalAlign="Center">
+            <h1>
+                <asp:LoginView ID="LoginView1" runat="server">
+                    <LoggedInTemplate>
+                        Bem vindo&nbsp;<strong><asp:LoginName ID="LoginName1" runat="server" /></strong>
+                        <!-- <font id="clock"></font>-->
+                        <asp:Label ID="LabelData" runat="server" Text="Label"></asp:Label>
+                    </LoggedInTemplate>
+                    <AnonymousTemplate>
+                        Bem vindo!&nbsp;
+                        <!-- <font id="clock"></font>-->
+                        <asp:Label ID="LabelData" runat="server" Text="Label"></asp:Label>
+                        &nbsp;<asp:Image ID="Image1" runat="server" ImageUrl="~/css/img/cadastro.png" />
+                        &nbsp;<asp:LinkButton    ID="LinkButtonCadastrar" runat="server" 
+                        PostBackUrl="~/UsuarioCriar.aspx">Registrar úsuário</asp:LinkButton>                   
+                    </AnonymousTemplate>
+                </asp:LoginView>
+                
+	            &nbsp;&nbsp;<asp:Image            ID="Image5" runat="server" ImageUrl="~/imagens/16x16/alert.png"/>
+	            <a href="/enterprise/ZonaSobre/novidades.aspx" id="A1">Novidades</a>
+	            &nbsp;&nbsp;<asp:Image            ID="Image6" runat="server" ImageUrl="~/imagens/16x16/cpu.png"/>
+	            <a href="/enterprise/ZonaSobre/definicao.aspx" id="A2">O que é o Enterprise</a>
+	            &nbsp;&nbsp;<asp:Image            ID="Image7" runat="server" ImageUrl="~/imagens/16x16/add.png"/>
+	            <a href="/enterprise/ZonaSobre/caracteristicas.aspx" id="A3">Características</a>
+                &nbsp;&nbsp;<asp:Image            ID="Image2" runat="server" ImageUrl="~/css/img/help.png"/>
+                <a href="/enterprise/ZonaSobre/ajuda.aspx" id="A4">Ajuda</a>
+                &nbsp;&nbsp;<asp:Image            ID="Image3" runat="server" ImageUrl="~/css/img/chave.png"/>
+                <asp:LoginStatus      ID="LoginStatus1" runat="server" EnableTheming="False" LoginText="Entrar" LogoutText="Trocar Usuário" />
+            </h1>
+        </asp:Panel>   
+        <!--/ BARRA TOP FIM /-->
+        
+      <!-- 01-SETOR INICIO -->  
+      <div class="sec01">
+          
+          <!-- PAGINA INICIO -->
+          <div id="_pagina">
+            
+            <!--/ BORDAS INICIO 
+            <div class="bordaE"></div>
+            <div class="bordaD"></div>
+            <!--/ BORDAS FIM /--> 
+    
+     
+            <!--/ TOPO INICIO /-->
+	        <div id="_topo">
+		     
+                <div class="logo">
+                    <asp:ImageButton ID="ImageButtonLogotipo" runat="server" ImageUrl="imagens/logotipo.png" />
+                    <div class="limpar"></div>
+                </div>
+                
+                <div class="usuario">
+                        <asp:LoginView ID="LoginView2" runat="server">
+                            <LoggedInTemplate>
+                                
+                                <div class="usuarioInfo">
+                                    <asp:Label        ID="LabelUsuEmpresa" runat="server" Text="NOME EMPRESA" Font-Bold="True"></asp:Label><br />
+                                    <asp:LinkButton   ID="LinkButtonUsuOnlineTotal" runat="server" PostBackUrl="UsuarioListar.aspx">Usuários Online</asp:LinkButton>
+                                    <asp:Label        ID="LabelUsoLoginNome" runat="server" Text="Usuário logado"></asp:Label><br />
+                                    <asp:Label        ID="LabelUsoIP" runat="server" Text="IP:"></asp:Label><br />
+                                    <asp:Label        ID="LabelUsuAcesso" runat="server" Text="Último Acesso"></asp:Label><br />
+                                </div>
+                                <div class="usuarioFoto" >
+                                    <asp:Image 
+                                        ID="ImagemFoto" 
+                                        runat="server" 
+                                        BorderWidth="0" 
+                                        Height="105px" 
+                                        Width="95px" ForeColor="#CCCCCC" ImageUrl="~/imagens/user.png" />
+                                </div>
+                            </LoggedInTemplate>
+                            <AnonymousTemplate>
+                                <div class="usuarioLogin">
+                                    <asp:Login ID="Login1" runat="server" 
+                                        LoginButtonText="Entrar" 
+                                        TitleText="Entrar no sistema">
+                                        <TextBoxStyle CssClass="shadyinput" />
+                                    </asp:Login>
+                                </div>
+                            </AnonymousTemplate>
+                        </asp:LoginView>
+                        
+                </div>
+                  
+	        </div>
+			<div class="limpar"></div>
+	        <!--/ TOPO FIM /-->
+            
+            <!--/ MENU INICIO /-->
+            <div id="_menu">
+            <!-- / MENUTAB INICIO FIM /-->
+            <div id="TabMenudropdown">
+            <asp:Menu ID="MenuTab" runat="server" Orientation="Horizontal" StaticEnableDefaultPopOutImage="False"
+                onmenuitemclick="MenuTab_MenuItemClick">
+                <Items>
+                     <asp:MenuItem Text="Principal"                 Value="tab1" Selected="true" NavigateUrl="~/" />
+                     <asp:MenuItem Text="Ferramentas"               Value="tab2" />
+                     <asp:MenuItem Text="Relatorios"                Value="tab3" NavigateUrl="ZonaRelatorios/WebForm1.aspx"/>
+                     <asp:MenuItem Text="Gestão do Conhecimento"    Value="tab4" NavigateUrl="ZonaGC/WebForm1.aspx" />
+                </Items>
+                <StaticMenuStyle        CssClass="Tab" />
+                <StaticMenuItemStyle    CssClass="TabItem" />
+                <StaticSelectedStyle    CssClass="TabSelecionado" />
+            </asp:Menu>
+            </div>
+            
+            <asp:MultiView ID="MultiView1" runat="server" ActiveViewIndex="0">
+                
+                <asp:View ID="View1" runat="server">
+                    <!-- / MENU PRETO INICIO /-->
+                    <div id="Div1menudropdown">
+                      <ul class="dropdown">
+	                    
+	                    <li><a class="dir">Institucional</a>
+		                    <ul>
+			                    <li><asp:LinkButton ID="LinkButton3"    Text="A empresa" runat="server"     CommandArgument="empresa" OnClick="Menu_Click" /></li>
+			                    <li><asp:LinkButton ID="LinkButton4"    Text="Missão" runat="server"        CommandArgument="missao" OnClick="Menu_Click" /></li>
+			                    <li><asp:LinkButton ID="LinkButton5"    Text="Visão" runat="server"         CommandArgument="visao" OnClick="Menu_Click" /></li>
+			                    <li><asp:LinkButton ID="LinkButton10"   Text="Documentos" runat="server"    CommandArgument="documento" OnClick="Menu_Click" /></li>
+		                    </ul>
+	                    </li>
+	                    <li><a class="dir">Cadastros</a>
+	                      <ul>
+	                          <li><a href="">Usuários</a></li>
+	                          <li><a href="">Clientes</a></li>
+	                          <li><a href="">Fornecedores</a></li>
+	                          <li><a href="">Funcionários</a></li>
+	                          <li><a href="">Vendedores</a></li>
+	                          <li><a href="">Aguarde novas versões!</a></li>
+	                      </ul>
+	                    </li>
+	                    <li><a class="dir">Finanças</a>
+	                      <ul>
+	                        <li><a href="">Caixa</a></li>
+	                        <li><a href="">Contas a pagar/pagas</a></li>
+	                        <li><a href="">Contas a receber/recebidas</a></li>
+	                        <li><a href="">Aguarde novas versões!</a></li>
+	                      </ul>
+	                    </li>
+	                    <li><a class="dir">Informação</a>
+		                    <ul>
+			                    <li><asp:LinkButton ID="LinkButton12" Text="Aniversariantes" runat="server" CommandArgument="aniversariantes" OnClick="Menu_Click" /></li>
+			                    <li><asp:LinkButton ID="LinkButton15" Text="Mundo" runat="server" CommandArgument="mundo" OnClick="Menu_Click" /></li>
+			                    <li><asp:LinkButton ID="LinkButton16" Text="Esporte" runat="server" CommandArgument="esporte" OnClick="Menu_Click" /></li>
+			                    <li><asp:LinkButton ID="LinkButton17" Text="Economia" runat="server" CommandArgument="economia" OnClick="Menu_Click" /></li>
+			                    <li><asp:LinkButton ID="LinkButton18" Text="Tecnologia" runat="server" CommandArgument="tecnologia" OnClick="Menu_Click" /></li>
+			                    <li><asp:LinkButton ID="LinkButton6" Text="Concursos" runat="server" CommandArgument="concurso" OnClick="Menu_Click" /></li>
+		                    </ul>
+	                    </li>
+	                    <li><a class="dir">Mensagem</a>
+	                        <ul>
+			                    <li><asp:LinkButton ID="LinkButton20" Text="Enviar email" runat="server" CommandArgument="enviaremail" OnClick="Menu_Click" /></li>
+			                    <li><asp:LinkButton ID="LinkButton8" Text="Enviar SMS" runat="server" CommandArgument="enviarsms" OnClick="Menu_Click" /></li>
+			                    <li><asp:LinkButton ID="LinkButton9" Text="Bate-Papo" runat="server" CommandArgument="batepapo" OnClick="Menu_Click" /></li>
+		                    </ul>
+		                </li>
+		                <li><a class="dir">Suporte</a>
+		                    <ul>
+			                    <li><asp:LinkButton ID="LinkButton23"   Text="Solicitar Suporte Técnico"    runat="server" CommandArgument="solicitarSuporte" OnClick="Menu_Click" /></li>
+			                    <li><asp:LinkButton ID="LinkButton2"    Text="Solicitar Outra necessidade"  runat="server" CommandArgument="solicitarWebsite" OnClick="Menu_Click" /></li>
+			                    <li><asp:LinkButton ID="LinkButton24"   Text="Solicitações registradas"     runat="server" CommandArgument="solicitarLista" OnClick="Menu_Click" /></li>
+			                </ul>
+		                </li>
+                    </ul>
+                    </div>
+                    <!-- / MENU PRETO FIM /-->
+                </asp:View>
+                <asp:View ID="View2" runat="server">
+                    <div id="Div2menudropdown">
+                        <ul class="dropdown">
+                            <li>
+                                <asp:LinkButton ID="LinkButton1" Text="Consulta CEP" runat="server"   CssClass="dir" CommandArgument="buscarcep" OnClick="Menu_Click" />
+                            </li>
+                           <li><a class="dir">Consulta Receita Federal</a>
+                                <ul>
+                                    <li><asp:LinkButton ID="LinkButton11" runat="server" PostBackUrl="http://www.receita.fazenda.gov.br/pessoajuridica/cnpj/cnpjreva/cnpjreva_solicitacao.asp">Pessoa Jurídica - Emissão de Comprovante de Inscrição e de Situação Cadastral </asp:LinkButton></li>
+                                    <li><asp:LinkButton ID="LinkButton13" runat="server" PostBackUrl="http://www.receita.fazenda.gov.br/Aplicacoes/ATCTA/CPF/ConsultaPublica.asp">Pessoa Física - Comprovante de Situação Cadastral no CPF</asp:LinkButton></li>
+                                </ul>
+                           </li>
+                        </ul>
+                    </div>
+                </asp:View>
+               
+            </asp:MultiView>
+            
+            <!-- / MENUTAB PRETO FIM /-->
+
+            <!--/ MENU PRATA INICIO /-->
+            <div id="_menuSiteMap">
+                
+                <!--/ <nav id="productnav"> 
+		        <a href="/br/enterprise/novidades.html" id="pn-whats-new">Novidades</a> 
+		        <a href="/br/enterprise/sobre.html" id="pn-what-is">O que é o Enterprise</a> 
+		        <a href="/br/enterprise/caracteristicas.html" id="pn-features">Características</a> 
+		        <a href="/ZonaControle/" id="pn-download" class="downloadnow">Faça download</a> 
+	            </nav>/-->
+	            
+               
+               <!--/ TODOS /-->
+               <div class="esquerda">     
+               <asp:SiteMapPath ID="SiteMapPath1" runat="server" PathSeparator=" > " >
+                    <PathSeparatorStyle Font-Bold="false" ForeColor="#990000" />
+                    <CurrentNodeStyle Font-Bold="true" ForeColor="#333333"  />
+                    <NodeStyle Font-Bold="false" ForeColor="#990000" />
+                    <RootNodeStyle Font-Bold="false" ForeColor="#FF8000" />
+                </asp:SiteMapPath>
+               </div>
+               
+               <div class="direita">
+               
+                <!--/ ADMINISTRADORES /-->
+                <asp:LinkButton id="LinkButton7" runat="server"
+                Text="Painel de controle"  
+                CommandArgument="painel"  
+                OnClick="Menu_Click" 
+                />
+               </div>   
+           
+      
+	        
+                
+           </div>
+            </div>
+            <!-- / MENU FIM /-->
+	        
+           <!--/ CONTEUDO INICIO /-->
+           <div id="_conteudo">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+		   </div>
+		   <!--/ CONTEUDO FIM /-->        
+
+           <!--/ BARRA_CONTEUDO INICIO /-->
+           <div id="_conteudo2">
+           
+                <div id="colunacaixa">
+              
+                    <h1>
+                    <asp:Label ID="Label1" runat="server" Text="Acesso Rápido"></asp:Label>
+                    <asp:GridView ID="gridProfiles" runat="server" AutoGenerateColumns="true"/>
+                    </h1>
+                    
+                    <div id="colunaesquerda">
+                        <h5><strong>Sistemas externos:</strong></h5>
+                        <h2>Aqui, concentra-se os principais sistemas de informação e gestão usados na empresa.</h2>
+                        <br /><br />
+                        <p><asp:DropDownList ID="DropDownListSistemas" runat="server" CssClass="combobox"></asp:DropDownList></p>
+                        
+                        <p><asp:Button ID="ButtonSistemas" runat="server" Text="Continuar »" 
+                                CssClass="botaoVerde" 
+                                onclientclick="desabilitar(this);" 
+                                UseSubmitBehavior="False" 
+                                onclick="ButtonSistemas_Click" /></p>
+                   </div>
+                    
+                    <div id="colunacentro">
+                        <h5><strong>Favoritos:</strong></h5>
+                        <h2>Lista dos principais sites com acesso livre, úteis a empresa.</h2>
+                        <br /><br />
+                        <p><asp:DropDownList ID="DropDownListFavoritos" runat="server" CssClass="combobox"></asp:DropDownList></p>
+                        <p><asp:Button ID="ButtonFavoritos" runat="server" Text="Continuar »" 
+                            CssClass="botaoAzul" 
+                            onclientclick="desabilitar(this);" 
+                            UseSubmitBehavior="False"
+                            onclick="ButtonFavoritos_Click"/></p>
+                    </div>
+                    
+                    <div id="colunadireita">
+                         <h5><strong>
+                        Downloads de arquivos para suporte:</strong></h5>
+                        <h2>Aqui você encontra atualizações dos sistemas e diversos utilitários.</h2>
+                        <br /><br />
+                        <p><asp:DropDownList ID="DropDownListDownloads" runat="server" CssClass="combobox"></asp:DropDownList></p>
+                        <p><asp:Button ID="ButtonSuporte" runat="server" Text="Continuar »" 
+                            Cssclass="botaoLaranja" 
+                            onclientclick="desabilitar(this);" 
+                            UseSubmitBehavior="False"
+                            onclick="ButtonDownloads_Click" /></p>
+                     </div>
+
+                   <div class="limpar"></div>
+                   
+                </div>
+                <div class="sombra">&nbsp;</div>
+              
+                <asp:Panel ID="PanelAviso" runat="server" HorizontalAlign="Center">
+                    <h1>Aviso: No momento, este sistema funciona melhor no navegador <strong>Google Chrome</strong>.</h1>
+                </asp:Panel>
+    
+            </div>
+           <!--/ BARRA_CONTEUDO FIM /-->
+          </div>
+          <!--/ PAGINA FIM /-->   
+                    
+       </div>
+       <!-- 01-SETOR FIM -->  
+    
+  
+	
+       <!--/ 02-SETOR INICIO /-->  
+       <div class="sec02">
+       
+        
+	        
+              <p style="text-align:center;">
+              <br /><br />
+              <strong>
+                  &nbsp;<asp:Image ID="Image4" runat="server" ImageUrl="~/css/img/icobr.gif"/>
+                  &nbsp;ENTERPRISE® 2010
+              </strong>  
+              <br /><br />
+              ©2010 MMSTEC SOLUÇÕES EM INFORMÁTICA LTDA 
+              </p>
+        </div>
+       <!--/ 02-SETOR FIM /-->
+        
+       <!--/ 03 SETOR RODAPE INICIO /-->
+       <div id="rodape"> 
+        </div>  
+       <!--/ 03 SETOR RODAPE FIM /-->
+          
+    </div>
+	<!--/ DIB PRINCIPAL FIM /-->
+	
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,1252 @@
+﻿<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{754BEF19-BEF1-4D79-8110-81D91E58CEEE}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>portal</RootNamespace>
+    <AssemblyName>portal</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Extensions.Design, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\portal.mdb">
+    </Content>
+    <Content Include="css\img\bgCentroAsc.png" />
+    <Content Include="css\img\bgCentroDesc.png" />
+    <Content Include="css\img\bg_bordaD.png" />
+    <Content Include="css\img\bg_bordaE.png" />
+    <Content Include="css\img\bg_degrade.jpg" />
+    <Content Include="css\img\bg_login.gif" />
+    <Content Include="css\img\bg_main.gif" />
+    <Content Include="css\img\bg_menu.gif" />
+    <Content Include="css\img\bg_sombra.gif" />
+    <Content Include="css\img\input_shadow.gif" />
+    <Content Include="css\img\menuPreto.png" />
+    <Content Include="css\img\roundedcornr_351239_bl.png" />
+    <Content Include="css\img\roundedcornr_351239_br.png" />
+    <Content Include="css\img\roundedcornr_351239_tl.png" />
+    <Content Include="css\img\roundedcornr_351239_tr.png" />
+    <Content Include="css\img\roundedcornr_755818_bl.png" />
+    <Content Include="css\img\roundedcornr_755818_br.png" />
+    <Content Include="css\img\roundedcornr_755818_tl.png" />
+    <Content Include="css\img\roundedcornr_755818_tr.png" />
+    <Content Include="css\img\sombra.png" />
+    <Content Include="Default.aspx" />
+    <Content Include="imagens\+.gif" />
+    <Content Include="imagens\-.gif" />
+    <Content Include="imagens\fundo.gif" />
+    <Content Include="imagens\logoFTC.png" />
+    <Content Include="imagens\mini-adicionar.png" />
+    <Content Include="imagens\mini-anexar.png" />
+    <Content Include="imagens\mini-baixar.gif" />
+    <Content Include="imagens\mini-cadeado.png" />
+    <Content Include="imagens\mini-deletar.png" />
+    <Content Include="imagens\mini-descer.jpg" />
+    <Content Include="imagens\mini-direita.jpg" />
+    <Content Include="imagens\mini-esquerda.jpg" />
+    <Content Include="imagens\mini-mais.gif" />
+    <Content Include="imagens\mini-ok.gif" />
+    <Content Include="imagens\mini-pasta.gif" />
+    <Content Include="imagens\mini-sair.png" />
+    <Content Include="imagens\mini-selecionar.png" />
+    <Content Include="imagens\mini-sobe.gif" />
+    <Content Include="imagens\mini-subir.jpg" />
+    <Content Include="Listar.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Code\GridViewGroup.cs" />
+    <Compile Include="App_Code\GridViewGroupList.cs" />
+    <Compile Include="App_Code\GridViewHelper.cs" />
+    <Compile Include="App_Code\GridViewSummary.cs" />
+    <Compile Include="App_Code\GridViewSummaryList.cs" />
+    <Compile Include="AcessoRestrito.aspx.cs">
+      <DependentUpon>AcessoRestrito.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AcessoRestrito.aspx.designer.cs">
+      <DependentUpon>AcessoRestrito.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\WSDL\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="UsuarioListar.aspx.cs">
+      <DependentUpon>UsuarioListar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UsuarioListar.aspx.designer.cs">
+      <DependentUpon>UsuarioListar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ZonaControle\Downloads\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ZonaControle\Downloads\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm2.aspx.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm2.aspx.designer.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ZonaGC\audio\Upload.aspx.cs">
+      <DependentUpon>Upload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ZonaGC\audio\Upload.aspx.designer.cs">
+      <DependentUpon>Upload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ZonaGC\audio\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ZonaGC\audio\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ZonaGC\cursos\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ZonaGC\cursos\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ZonaGC\docs\Upload.aspx.cs">
+      <DependentUpon>Upload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ZonaGC\docs\Upload.aspx.designer.cs">
+      <DependentUpon>Upload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ZonaGC\docs\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ZonaGC\docs\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ZonaGC\docs\upload1.aspx.cs">
+      <DependentUpon>upload1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ZonaGC\video\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ZonaGC\video\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ZonaGC\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ZonaGC\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ZonaPrincipal\MenuAjuda\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ZonaPrincipal\MenuAjuda\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ZonaFerramentas\BuscaCep\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ZonaFerramentas\BuscaCep\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ZonaFerramentas\BuscaCep\WebForm2.aspx.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ZonaFerramentas\BuscaCep\WebForm2.aspx.designer.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ZonaPrincipal\MenuCadastros\Funcionarios\Cadastro\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ZonaPrincipal\MenuCadastros\Funcionarios\Cadastro\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ZonaPrincipal\MenuCadastros\Funcionarios\Lista\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ZonaPrincipal\MenuCadastros\Funcionarios\Lista\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ZonaPrincipal\MenuCadastros\Funcionarios\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ZonaPrincipal\MenuCadastros\Funcionarios\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="UsuarioCriar.aspx.cs">
+      <DependentUpon>UsuarioCriar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UsuarioCriar.aspx.designer.cs">
+      <DependentUpon>UsuarioCriar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ZonaControle\Usuarios\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ZonaControle\Usuarios\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ZonaPrincipal\MenuCadastros\Pessoas\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ZonaPrincipal\MenuCadastros\Pessoas\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ZonaPrincipal\MenuEmail\SendMail\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ZonaPrincipal\MenuEmail\SendMail\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ZonaPrincipal\MenuEmail\SendMail\WebForm2.aspx.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ZonaPrincipal\MenuEmail\SendMail\WebForm2.aspx.designer.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ZonaPrincipal\MenuEmail\SendSMS\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ZonaPrincipal\MenuEmail\SendSMS\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ZonaPrincipal\MenuEmail\Webmail\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ZonaPrincipal\MenuEmail\Webmail\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ZonaControle\Favoritos\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ZonaControle\Favoritos\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ZonaPrincipal\MenuCadastros\Funcionarios\Aniversariantes\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ZonaPrincipal\MenuCadastros\Funcionarios\Aniversariantes\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ZonaPrincipal\MenuInformacao\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ZonaPrincipal\MenuInformacao\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ZonaPrincipal\MenuInstitucional\Documentos\Upload.aspx.cs">
+      <DependentUpon>Upload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ZonaPrincipal\MenuInstitucional\Documentos\Upload.aspx.designer.cs">
+      <DependentUpon>Upload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ZonaPrincipal\MenuInstitucional\Documentos\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ZonaPrincipal\MenuInstitucional\Documentos\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ZonaPrincipal\MenuInstitucional\Empresa\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ZonaPrincipal\MenuInstitucional\Empresa\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ZonaPrincipal\MenuInformacao\Mundo\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ZonaPrincipal\MenuInformacao\Mundo\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ZonaControle\Sistemas\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ZonaControle\Sistemas\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="msg\404.aspx.cs">
+      <DependentUpon>404.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="msg\404.aspx.designer.cs">
+      <DependentUpon>404.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="msg\deny.aspx.cs">
+      <DependentUpon>deny.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="msg\deny.aspx.designer.cs">
+      <DependentUpon>deny.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UsuarioSenhaLembrar.aspx.cs">
+      <DependentUpon>UsuarioSenhaLembrar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UsuarioSenhaLembrar.aspx.designer.cs">
+      <DependentUpon>UsuarioSenhaLembrar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Listar.aspx.cs">
+      <DependentUpon>Listar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Listar.aspx.designer.cs">
+      <DependentUpon>Listar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPage.Master.cs">
+      <DependentUpon>MasterPage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPage.Master.designer.cs">
+      <DependentUpon>MasterPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UsuarioSenhaTrocar.aspx.cs">
+      <DependentUpon>UsuarioSenhaTrocar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UsuarioSenhaTrocar.aspx.designer.cs">
+      <DependentUpon>UsuarioSenhaTrocar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ZonaControle\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ZonaControle\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ZonaPrincipal\MenuInstitucional\Missao\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ZonaPrincipal\MenuInstitucional\Missao\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ZonaPrincipal\MenuInstitucional\Visao\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ZonaPrincipal\MenuInstitucional\Visao\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ZonaPrincipal\MenuInstitucional\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ZonaPrincipal\MenuInstitucional\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ZonaPrincipal\MenuSuporte\Listar\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ZonaPrincipal\MenuSuporte\Listar\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ZonaPrincipal\MenuSuporte\Suporte\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ZonaPrincipal\MenuSuporte\Suporte\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ZonaPrincipal\MenuSuporte\Website\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ZonaPrincipal\MenuSuporte\Website\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ZonaRelatorios\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ZonaRelatorios\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ZonaSobre\ajuda.aspx.cs">
+      <DependentUpon>ajuda.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ZonaSobre\ajuda.aspx.designer.cs">
+      <DependentUpon>ajuda.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ZonaSobre\definicao.aspx.cs">
+      <DependentUpon>definicao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ZonaSobre\definicao.aspx.designer.cs">
+      <DependentUpon>definicao.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ZonaSobre\caracteristicas.aspx.cs">
+      <DependentUpon>caracteristicas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ZonaSobre\caracteristicas.aspx.designer.cs">
+      <DependentUpon>caracteristicas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ZonaSobre\novidades.aspx.cs">
+      <DependentUpon>novidades.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ZonaSobre\novidades.aspx.designer.cs">
+      <DependentUpon>novidades.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\Principal.css" />
+    <Content Include="imagens\logotipo.png" />
+    <Content Include="MasterPage.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\portal.BLL\portal.BLL.csproj">
+      <Project>{6A145B8B-9F6D-4C89-9442-1A3B2592EBBC}</Project>
+      <Name>portal.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\portal.DAL\portal.DAL.csproj">
+      <Project>{BF35431C-6600-4208-BFE1-1115C71628A4}</Project>
+      <Name>portal.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\portal.TAB\portal.TAB.csproj">
+      <Project>{E8342F79-FB4B-4594-A7A9-15D998BB7253}</Project>
+      <Name>portal.TAB</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\portal.UTIL\portal.LIB.csproj">
+      <Project>{BD7DB4C0-80AA-4DDD-B4D3-05E8F8C2EFE2}</Project>
+      <Name>portal.LIB</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\portalBO\portalBO.csproj">
+      <Project>{341B596E-688B-45A9-BA90-41726D046FDC}</Project>
+      <Name>portalBO</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="msg\400.htm" />
+    <Content Include="msg\401.htm" />
+    <Content Include="msg\403.htm" />
+    <Content Include="msg\404.htm" />
+    <Content Include="msg\500.htm" />
+    <Content Include="msg\deny.aspx" />
+    <Content Include="msg\deny.htm" />
+    <Content Include="msg\images\400.png" />
+    <Content Include="msg\images\401.png" />
+    <Content Include="msg\images\403.png" />
+    <Content Include="msg\images\404.png" />
+    <Content Include="msg\images\500.png" />
+    <Content Include="msg\images\deny.png" />
+    <Content Include="css\img\bg-menu.gif" />
+    <Content Include="css\img\bg_mnu_win7.png" />
+    <Content Include="css\img\chrome_bottom_left.png" />
+    <Content Include="css\img\chrome_bottom_right.jpg" />
+    <Content Include="css\img\chrome_bottom_sliver.png" />
+    <Content Include="css\img\chrome_top_left.png" />
+    <Content Include="css\img\chrome_top_right.png" />
+    <Content Include="imagens\mmstec_logo.png" />
+    <Content Include="imagens\camera.png" />
+    <Content Include="imagens\user.png" />
+    <Content Include="UsuarioSenhaLembrar.aspx" />
+    <Content Include="Login.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AcessoRestrito.aspx" />
+    <Content Include="css\aspnet.css" />
+    <Content Include="imagens\128x128\aniversario.png" />
+    <Content Include="imagens\128x128\curso.png" />
+    <Content Include="css\img\paginaContent.png" />
+    <Content Include="imagens\128x128\arquivo.png" />
+    <Content Include="imagens\128x128\audio.png" />
+    <Content Include="imagens\128x128\documentos.png" />
+    <Content Include="imagens\128x128\economia.png" />
+    <Content Include="imagens\128x128\esporte.png" />
+    <Content Include="imagens\128x128\tecnologia.png" />
+    <Content Include="imagens\128x128\video.png" />
+    <Content Include="imagens\16x16\0.png" />
+    <Content Include="imagens\16x16\1.png" />
+    <Content Include="imagens\16x16\2.png" />
+    <Content Include="imagens\16x16\button-withe.png" />
+    <Content Include="imagens\32x32\IE7.png" />
+    <Content Include="imagens\32x32\safari.jpg" />
+    <Content Include="imagens\32x32\sql_server_2008.png" />
+    <Content Include="imagens\64x64\chrome.png" />
+    <Content Include="imagens\64x64\chsarp.png" />
+    <Content Include="imagens\64x64\csharp.png" />
+    <Content Include="imagens\64x64\dotNet.png" />
+    <Content Include="imagens\64x64\microsoft.png.png" />
+    <Content Include="imagens\64x64\safari.jpg" />
+    <Content Include="imagens\64x64\safari.png" />
+    <Content Include="imagens\64x64\firefox.png" />
+    <Content Include="imagens\64x64\IE7.png" />
+    <Content Include="imagens\64x64\microsoft.png" />
+    <Content Include="imagens\64x64\microsoft_security_essentials.png" />
+    <Content Include="imagens\64x64\sql_server_2008.png" />
+    <Content Include="imagens\64x64\visualstudiosimbolo.png" />
+    <Content Include="imagens\64x64\visualstudio.png" />
+    <Content Include="imagens\mini-icobranco.png" />
+    <Content Include="imagens\mini-alterar.png" />
+    <Content Include="imagens\mini-apagar.png" />
+    <Content Include="imagens\mini-atualizar.png" />
+    <Content Include="imagens\mini-detalhar.png" />
+    <Content Include="imagens\mini-visualizar.png" />
+    <Content Include="css\img\splash.png" />
+    <Content Include="imagens\mini-icoverde.png" />
+    <Content Include="imagens\128x128\mundo.png" />
+    <Content Include="imagerotator\imagemCapa.xml" />
+    <Content Include="imagerotator\imagemCapa1.jpg" />
+    <Content Include="imagerotator\imagemCapa2.jpg" />
+    <Content Include="imagerotator\imagemCapaBmc1.png" />
+    <Content Include="imagerotator\imagemCapaBmc2.png" />
+    <Content Include="imagerotator\imagemCapaBmcEmail.png" />
+    <Content Include="imagerotator\imagemCapaBmcInfo.png" />
+    <Content Include="imagerotator\imagemCapaCaracteristicas.png" />
+    <Content Include="imagerotator\imagemCapaDefinicao.png" />
+    <Content Include="imagerotator\imagemCapaEnterprise.png" />
+    <Content Include="imagerotator\imagemCapaMolde.png" />
+    <Content Include="imagerotator\imagemCapaNovidades.png" />
+    <Content Include="imagerotator\imagemCapaSuporte.png" />
+    <Content Include="imagerotator\imagemCapaTecnologias.png" />
+    <Content Include="imagerotator\imagerotator.swf" />
+    <Content Include="imagerotator\swfobject.js" />
+    <Content Include="off-app_offline.htm" />
+    <Content Include="css\dropdown\themes\mmstec\default.advanced.css" />
+    <Content Include="css\dropdown\themes\mmstec\default.css" />
+    <Content Include="css\dropdown\themes\mmstec\helper.css" />
+    <Content Include="css\dropdown\themes\mmstec\images\bg-menu.gif" />
+    <Content Include="css\dropdown\themes\mmstec\images\favicon.ico" />
+    <Content Include="css\dropdown\themes\mmstec\images\globalnavbg.png" />
+    <Content Include="css\dropdown\themes\mmstec\images\globalnavbg_hover.png" />
+    <Content Include="css\dropdown\themes\mmstec\images\grad1.png" />
+    <Content Include="css\dropdown\themes\mmstec\images\icon.png" />
+    <Content Include="css\GridView2.css" />
+    <Content Include="css\img\janela.PNG" />
+    <Content Include="css\img\smb.png" />
+    <Content Include="css\img\tab1.png" />
+    <Content Include="css\img\tab2.png" />
+    <Content Include="css\dropdown\themes\nvidia.com\default.advanced.css" />
+    <Content Include="css\dropdown\themes\nvidia.com\default.css" />
+    <Content Include="css\dropdown\themes\nvidia.com\helper.css" />
+    <Content Include="css\dropdown\themes\nvidia.com\images\favicon.ico" />
+    <Content Include="css\dropdown\themes\nvidia.com\images\grad1.png" />
+    <Content Include="css\dropdown\themes\nvidia.com\images\icon.png" />
+    <Content Include="imagens\128x128\access-alt.png" />
+    <Content Include="imagens\128x128\access.png" />
+    <Content Include="imagens\128x128\add-window.png" />
+    <Content Include="imagens\128x128\add.png" />
+    <Content Include="imagens\128x128\alert.png" />
+    <Content Include="imagens\128x128\back up.png" />
+    <Content Include="imagens\128x128\back-alt.png" />
+    <Content Include="imagens\128x128\back.png" />
+    <Content Include="imagens\128x128\button blue alt.png" />
+    <Content Include="imagens\128x128\button green alt.png" />
+    <Content Include="imagens\128x128\button red alt.png" />
+    <Content Include="imagens\128x128\button-blue.png" />
+    <Content Include="imagens\128x128\button-green.png" />
+    <Content Include="imagens\128x128\button-red.png" />
+    <Content Include="imagens\128x128\button-withe.png" />
+    <Content Include="imagens\128x128\button-yellow.png" />
+    <Content Include="imagens\128x128\cal.png" />
+    <Content Include="imagens\128x128\CD-burn.png" />
+    <Content Include="imagens\128x128\CD-Music.png" />
+    <Content Include="imagens\128x128\CD.png" />
+    <Content Include="imagens\128x128\clock.png" />
+    <Content Include="imagens\128x128\coffe.png" />
+    <Content Include="imagens\128x128\cpu.png" />
+    <Content Include="imagens\128x128\cut.png" />
+    <Content Include="imagens\128x128\db-add.png" />
+    <Content Include="imagens\128x128\db-download.png" />
+    <Content Include="imagens\128x128\db-remove.png" />
+    <Content Include="imagens\128x128\db-upload.png" />
+    <Content Include="imagens\128x128\db-web.png" />
+    <Content Include="imagens\128x128\db.png" />
+    <Content Include="imagens\128x128\delete-alt.png" />
+    <Content Include="imagens\128x128\delete.png" />
+    <Content Include="imagens\128x128\DJ-off.png" />
+    <Content Include="imagens\128x128\DJ-on.png" />
+    <Content Include="imagens\128x128\dollar.png" />
+    <Content Include="imagens\128x128\door.png" />
+    <Content Include="imagens\128x128\down-alt.png" />
+    <Content Include="imagens\128x128\down.png" />
+    <Content Include="imagens\128x128\download.png" />
+    <Content Include="imagens\128x128\edit user.png" />
+    <Content Include="imagens\128x128\edit.png" />
+    <Content Include="imagens\128x128\emoticon-1.png" />
+    <Content Include="imagens\128x128\emoticon-10.png" />
+    <Content Include="imagens\128x128\emoticon-11.png" />
+    <Content Include="imagens\128x128\emoticon-12.png" />
+    <Content Include="imagens\128x128\emoticon-2.png" />
+    <Content Include="imagens\128x128\emoticon-3.png" />
+    <Content Include="imagens\128x128\emoticon-4.png" />
+    <Content Include="imagens\128x128\emoticon-5.png" />
+    <Content Include="imagens\128x128\emoticon-6.png" />
+    <Content Include="imagens\128x128\emoticon-7.png" />
+    <Content Include="imagens\128x128\emoticon-8.png" />
+    <Content Include="imagens\128x128\emoticon-9.png" />
+    <Content Include="imagens\128x128\error.png" />
+    <Content Include="imagens\128x128\euro.png" />
+    <Content Include="imagens\128x128\exclamation.png" />
+    <Content Include="imagens\128x128\faq.png" />
+    <Content Include="imagens\128x128\favorites-add.png" />
+    <Content Include="imagens\128x128\favorites.png" />
+    <Content Include="imagens\128x128\fax.png" />
+    <Content Include="imagens\128x128\file-copy.png" />
+    <Content Include="imagens\128x128\file-doc.png" />
+    <Content Include="imagens\128x128\file-down.png" />
+    <Content Include="imagens\128x128\file-edit.png" />
+    <Content Include="imagens\128x128\file-new.png" />
+    <Content Include="imagens\128x128\file-up.png" />
+    <Content Include="imagens\128x128\file.png" />
+    <Content Include="imagens\128x128\find.png" />
+    <Content Include="imagens\128x128\first.png" />
+    <Content Include="imagens\128x128\folder-blue rename.png" />
+    <Content Include="imagens\128x128\folder-blue up.png" />
+    <Content Include="imagens\128x128\folder-blue-down.png" />
+    <Content Include="imagens\128x128\folder-blue-image.png" />
+    <Content Include="imagens\128x128\folder-blue.png" />
+    <Content Include="imagens\128x128\folder-image.png" />
+    <Content Include="imagens\128x128\folder-white up.png" />
+    <Content Include="imagens\128x128\folder-white-down.png" />
+    <Content Include="imagens\128x128\folder-white-rename.png" />
+    <Content Include="imagens\128x128\folder-white.png" />
+    <Content Include="imagens\128x128\forward-alt.png" />
+    <Content Include="imagens\128x128\forward.png" />
+    <Content Include="imagens\128x128\HD-down.png" />
+    <Content Include="imagens\128x128\HD-share.png" />
+    <Content Include="imagens\128x128\HD-up.png" />
+    <Content Include="imagens\128x128\HD.png" />
+    <Content Include="imagens\128x128\help.png" />
+    <Content Include="imagens\128x128\home.png" />
+    <Content Include="imagens\128x128\info.png" />
+    <Content Include="imagens\128x128\ipod-off.png" />
+    <Content Include="imagens\128x128\ipod-on.png" />
+    <Content Include="imagens\128x128\key.png" />
+    <Content Include="imagens\128x128\last.png" />
+    <Content Include="imagens\128x128\Layer 4.png" />
+    <Content Include="imagens\128x128\ligth-off.png" />
+    <Content Include="imagens\128x128\ligth-on.png" />
+    <Content Include="imagens\128x128\lock.png" />
+    <Content Include="imagens\128x128\mail-edit.png" />
+    <Content Include="imagens\128x128\mail.png" />
+    <Content Include="imagens\128x128\misc-blue.png" />
+    <Content Include="imagens\128x128\misc-green.png" />
+    <Content Include="imagens\128x128\misc-red.png" />
+    <Content Include="imagens\128x128\misc-yellow.png" />
+    <Content Include="imagens\128x128\misc.png" />
+    <Content Include="imagens\128x128\module.png" />
+    <Content Include="imagens\128x128\monitor-off.png" />
+    <Content Include="imagens\128x128\monitor-on.png" />
+    <Content Include="imagens\128x128\music.png" />
+    <Content Include="imagens\128x128\offert.png" />
+    <Content Include="imagens\128x128\ok.png" />
+    <Content Include="imagens\128x128\orcamentos.png" />
+    <Content Include="imagens\128x128\package-add.png" />
+    <Content Include="imagens\128x128\package-down.png" />
+    <Content Include="imagens\128x128\Package-remove.png" />
+    <Content Include="imagens\128x128\package-up.png" />
+    <Content Include="imagens\128x128\package.png" />
+    <Content Include="imagens\128x128\paste.png" />
+    <Content Include="imagens\128x128\phone-blue.png" />
+    <Content Include="imagens\128x128\phone-green.png" />
+    <Content Include="imagens\128x128\phone-red.png" />
+    <Content Include="imagens\128x128\phone-yellow.png" />
+    <Content Include="imagens\128x128\picture.png" />
+    <Content Include="imagens\128x128\play-back.png" />
+    <Content Include="imagens\128x128\play-first.png" />
+    <Content Include="imagens\128x128\play-forward.png" />
+    <Content Include="imagens\128x128\play-options.png" />
+    <Content Include="imagens\128x128\play-pause.png" />
+    <Content Include="imagens\128x128\play-rec.png" />
+    <Content Include="imagens\128x128\play-repeat.png" />
+    <Content Include="imagens\128x128\play-star.png" />
+    <Content Include="imagens\128x128\play-stop.png" />
+    <Content Include="imagens\128x128\play.png" />
+    <Content Include="imagens\128x128\preferences.png" />
+    <Content Include="imagens\128x128\print-preview.png" />
+    <Content Include="imagens\128x128\print.png" />
+    <Content Include="imagens\128x128\public.png" />
+    <Content Include="imagens\128x128\question.png" />
+    <Content Include="imagens\128x128\redo.png" />
+    <Content Include="imagens\128x128\reload-alt.png" />
+    <Content Include="imagens\128x128\reload.png" />
+    <Content Include="imagens\128x128\remove-window.png" />
+    <Content Include="imagens\128x128\remove.png" />
+    <Content Include="imagens\128x128\save copy.png" />
+    <Content Include="imagens\128x128\save-alt.png" />
+    <Content Include="imagens\128x128\save-copy-alt.png" />
+    <Content Include="imagens\128x128\save.png" />
+    <Content Include="imagens\128x128\saveas-alt.png" />
+    <Content Include="imagens\128x128\search-file.png" />
+    <Content Include="imagens\128x128\search-web.png" />
+    <Content Include="imagens\128x128\search.png" />
+    <Content Include="imagens\128x128\server.png" />
+    <Content Include="imagens\128x128\sound.png" />
+    <Content Include="imagens\128x128\star.png" />
+    <Content Include="imagens\128x128\statistic.png" />
+    <Content Include="imagens\128x128\status-off.png" />
+    <Content Include="imagens\128x128\status-on.png" />
+    <Content Include="imagens\128x128\stop-alt.png" />
+    <Content Include="imagens\128x128\stop.png" />
+    <Content Include="imagens\128x128\tools.png" />
+    <Content Include="imagens\128x128\trash-empty.png" />
+    <Content Include="imagens\128x128\trash-full.png" />
+    <Content Include="imagens\128x128\undo.png" />
+    <Content Include="imagens\128x128\unlock.png" />
+    <Content Include="imagens\128x128\up-alt.png" />
+    <Content Include="imagens\128x128\up.png" />
+    <Content Include="imagens\128x128\upload.png" />
+    <Content Include="imagens\128x128\user.png" />
+    <Content Include="imagens\128x128\users.png" />
+    <Content Include="imagens\128x128\vcard.png" />
+    <Content Include="imagens\128x128\web-ftp.png" />
+    <Content Include="imagens\128x128\web.png" />
+    <Content Include="imagens\128x128\window.png" />
+    <Content Include="imagens\128x128\wireless-blue.png" />
+    <Content Include="imagens\128x128\wireless-green.png" />
+    <Content Include="imagens\128x128\wireless-red.png" />
+    <Content Include="imagens\128x128\wireless-yellow.png" />
+    <Content Include="imagens\128x128\zoom+.png" />
+    <Content Include="imagens\128x128\zoom-.png" />
+    <Content Include="imagens\16x16\access-alt.png" />
+    <Content Include="imagens\16x16\access.png" />
+    <Content Include="imagens\16x16\add-window.png" />
+    <Content Include="imagens\16x16\add.png" />
+    <Content Include="imagens\16x16\alert.png" />
+    <Content Include="imagens\16x16\back up.png" />
+    <Content Include="imagens\16x16\back-alt.png" />
+    <Content Include="imagens\16x16\back.png" />
+    <Content Include="imagens\16x16\button blue alt.png" />
+    <Content Include="imagens\16x16\button green alt.png" />
+    <Content Include="imagens\16x16\button red alt.png" />
+    <Content Include="imagens\16x16\button-blue.png" />
+    <Content Include="imagens\16x16\button-green.png" />
+    <Content Include="imagens\16x16\button-red.png" />
+    <Content Include="imagens\16x16\button-yellow.png" />
+    <Content Include="imagens\16x16\cal.png" />
+    <Content Include="imagens\16x16\CD-burn.png" />
+    <Content Include="imagens\16x16\CD-Music.png" />
+    <Content Include="imagens\16x16\CD.png" />
+    <Content Include="imagens\16x16\clock.png" />
+    <Content Include="imagens\16x16\coffe.png" />
+    <Content Include="imagens\16x16\false.png" />
+    <Content Include="imagens\16x16\true.png" />
+    <Content Include="imagens\16x16\cpu.png" />
+    <Content Include="imagens\16x16\cut.png" />
+    <Content Include="imagens\16x16\db-add.png" />
+    <Content Include="imagens\16x16\db-download.png" />
+    <Content Include="imagens\16x16\db-remove.png" />
+    <Content Include="imagens\16x16\db-upload.png" />
+    <Content Include="imagens\16x16\db-web.png" />
+    <Content Include="imagens\16x16\db.png" />
+    <Content Include="imagens\16x16\delete-alt.png" />
+    <Content Include="imagens\16x16\delete.png" />
+    <Content Include="imagens\16x16\DJ-off.png" />
+    <Content Include="imagens\16x16\DJ-on.png" />
+    <Content Include="imagens\16x16\dollar.png" />
+    <Content Include="imagens\16x16\door.png" />
+    <Content Include="imagens\16x16\down-alt.png" />
+    <Content Include="imagens\16x16\down.png" />
+    <Content Include="imagens\16x16\download.png" />
+    <Content Include="imagens\16x16\edit user.png" />
+    <Content Include="imagens\16x16\edit.png" />
+    <Content Include="imagens\16x16\emoticon-1.png" />
+    <Content Include="imagens\16x16\emoticon-10.png" />
+    <Content Include="imagens\16x16\emoticon-11.png" />
+    <Content Include="imagens\16x16\emoticon-12.png" />
+    <Content Include="imagens\16x16\emoticon-2.png" />
+    <Content Include="imagens\16x16\emoticon-3.png" />
+    <Content Include="imagens\16x16\emoticon-4.png" />
+    <Content Include="imagens\16x16\emoticon-5.png" />
+    <Content Include="imagens\16x16\emoticon-6.png" />
+    <Content Include="imagens\16x16\emoticon-7.png" />
+    <Content Include="imagens\16x16\emoticon-8.png" />
+    <Content Include="imagens\16x16\emoticon-9.png" />
+    <Content Include="imagens\16x16\error.png" />
+    <Content Include="imagens\16x16\euro.png" />
+    <Content Include="imagens\16x16\exclamation.png" />
+    <Content Include="imagens\16x16\faq.png" />
+    <Content Include="imagens\16x16\favorites-add.png" />
+    <Content Include="imagens\16x16\favorites.png" />
+    <Content Include="imagens\16x16\fax.png" />
+    <Content Include="imagens\16x16\file-copy.png" />
+    <Content Include="imagens\16x16\file-doc.png" />
+    <Content Include="imagens\16x16\file-down.png" />
+    <Content Include="imagens\16x16\file-edit.png" />
+    <Content Include="imagens\16x16\file-new.png" />
+    <Content Include="imagens\16x16\file-up.png" />
+    <Content Include="imagens\16x16\file.png" />
+    <Content Include="imagens\16x16\find.png" />
+    <Content Include="imagens\16x16\first.png" />
+    <Content Include="imagens\16x16\folder-blue rename.png" />
+    <Content Include="imagens\16x16\folder-blue up.png" />
+    <Content Include="imagens\16x16\folder-blue-down.png" />
+    <Content Include="imagens\16x16\folder-blue-image.png" />
+    <Content Include="imagens\16x16\folder-blue.png" />
+    <Content Include="imagens\16x16\folder-image.png" />
+    <Content Include="imagens\16x16\folder-white up.png" />
+    <Content Include="imagens\16x16\folder-white-down.png" />
+    <Content Include="imagens\16x16\folder-white-rename.png" />
+    <Content Include="imagens\16x16\folder-white.png" />
+    <Content Include="imagens\16x16\forward-alt.png" />
+    <Content Include="imagens\16x16\forward.png" />
+    <Content Include="imagens\16x16\HD-down.png" />
+    <Content Include="imagens\16x16\HD-share.png" />
+    <Content Include="imagens\16x16\HD-up.png" />
+    <Content Include="imagens\16x16\HD.png" />
+    <Content Include="imagens\16x16\help.png" />
+    <Content Include="imagens\16x16\home.png" />
+    <Content Include="imagens\16x16\info.png" />
+    <Content Include="imagens\16x16\ipod-off.png" />
+    <Content Include="imagens\16x16\ipod-on.png" />
+    <Content Include="imagens\16x16\key.png" />
+    <Content Include="imagens\16x16\last.png" />
+    <Content Include="imagens\16x16\Layer 4.png" />
+    <Content Include="imagens\16x16\ligth-off.png" />
+    <Content Include="imagens\16x16\ligth-on.png" />
+    <Content Include="imagens\16x16\lock.png" />
+    <Content Include="imagens\16x16\mail-edit.png" />
+    <Content Include="imagens\16x16\mail.png" />
+    <Content Include="imagens\16x16\misc-blue.png" />
+    <Content Include="imagens\16x16\misc-green.png" />
+    <Content Include="imagens\16x16\misc-red.png" />
+    <Content Include="imagens\16x16\misc-yellow.png" />
+    <Content Include="imagens\16x16\misc.png" />
+    <Content Include="imagens\16x16\module.png" />
+    <Content Include="imagens\16x16\monitor-off.png" />
+    <Content Include="imagens\16x16\monitor-on.png" />
+    <Content Include="imagens\16x16\music.png" />
+    <Content Include="imagens\16x16\offert.png" />
+    <Content Include="imagens\16x16\ok.png" />
+    <Content Include="imagens\16x16\package-add.png" />
+    <Content Include="imagens\16x16\package-down.png" />
+    <Content Include="imagens\16x16\Package-remove.png" />
+    <Content Include="imagens\16x16\package-up.png" />
+    <Content Include="imagens\16x16\package.png" />
+    <Content Include="imagens\16x16\paste.png" />
+    <Content Include="imagens\16x16\phone-blue.png" />
+    <Content Include="imagens\16x16\phone-green.png" />
+    <Content Include="imagens\16x16\phone-red.png" />
+    <Content Include="imagens\16x16\phone-yellow.png" />
+    <Content Include="imagens\16x16\picture.png" />
+    <Content Include="imagens\16x16\play-back.png" />
+    <Content Include="imagens\16x16\play-first.png" />
+    <Content Include="imagens\16x16\play-forward.png" />
+    <Content Include="imagens\16x16\play-options.png" />
+    <Content Include="imagens\16x16\play-pause.png" />
+    <Content Include="imagens\16x16\play-rec.png" />
+    <Content Include="imagens\16x16\play-repeat.png" />
+    <Content Include="imagens\16x16\play-star.png" />
+    <Content Include="imagens\16x16\play-stop.png" />
+    <Content Include="imagens\16x16\play.png" />
+    <Content Include="imagens\16x16\preferences.png" />
+    <Content Include="imagens\16x16\print-preview.png" />
+    <Content Include="imagens\16x16\print.png" />
+    <Content Include="imagens\16x16\public.png" />
+    <Content Include="imagens\16x16\question.png" />
+    <Content Include="imagens\16x16\redo.png" />
+    <Content Include="imagens\16x16\reload-alt.png" />
+    <Content Include="imagens\16x16\reload.png" />
+    <Content Include="imagens\16x16\remove-window.png" />
+    <Content Include="imagens\16x16\remove.png" />
+    <Content Include="imagens\16x16\save copy.png" />
+    <Content Include="imagens\16x16\save-alt.png" />
+    <Content Include="imagens\16x16\save-copy-alt.png" />
+    <Content Include="imagens\16x16\save.png" />
+    <Content Include="imagens\16x16\saveas-alt.png" />
+    <Content Include="imagens\16x16\search-file.png" />
+    <Content Include="imagens\16x16\search-web.png" />
+    <Content Include="imagens\16x16\search.png" />
+    <Content Include="imagens\16x16\server.png" />
+    <Content Include="imagens\16x16\sound.png" />
+    <Content Include="imagens\16x16\star.png" />
+    <Content Include="imagens\16x16\statistic.png" />
+    <Content Include="imagens\16x16\status-off.png" />
+    <Content Include="imagens\16x16\status-on.png" />
+    <Content Include="imagens\16x16\stop-alt.png" />
+    <Content Include="imagens\16x16\stop.png" />
+    <Content Include="imagens\16x16\tools.png" />
+    <Content Include="imagens\16x16\trash-empty.png" />
+    <Content Include="imagens\16x16\trash-full.png" />
+    <Content Include="imagens\16x16\undo.png" />
+    <Content Include="imagens\16x16\unlock.png" />
+    <Content Include="imagens\16x16\up-alt.png" />
+    <Content Include="imagens\16x16\up.png" />
+    <Content Include="imagens\16x16\upload.png" />
+    <Content Include="imagens\16x16\user.png" />
+    <Content Include="imagens\16x16\users.png" />
+    <Content Include="imagens\16x16\vcard.png" />
+    <Content Include="imagens\16x16\web-ftp.png" />
+    <Content Include="imagens\16x16\web.png" />
+    <Content Include="imagens\16x16\window.png" />
+    <Content Include="imagens\16x16\wireless-blue.png" />
+    <Content Include="imagens\16x16\wireless-green.png" />
+    <Content Include="imagens\16x16\wireless-red.png" />
+    <Content Include="imagens\16x16\wireless-yellow.png" />
+    <Content Include="imagens\16x16\zoom+.png" />
+    <Content Include="imagens\16x16\zoom-.png" />
+    <Content Include="js\mascaras.js" />
+    <Content Include="js\metodos.js" />
+    <Content Include="js\messagebox.js" />
+    <None Include="Service References\WSDL\configuration91.svcinfo" />
+    <None Include="Service References\WSDL\configuration.svcinfo" />
+    <None Include="Service References\WSDL\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="UsuarioListar.aspx" />
+    <Content Include="ZonaControle\Downloads\WebForm1.aspx" />
+    <Content Include="WebForm2.aspx" />
+    <Content Include="ZonaGC\audio\jquery-1.4.2.min.js" />
+    <Content Include="ZonaGC\audio\jquery.jmp3.js" />
+    <Content Include="ZonaGC\audio\mamafrica.mp3" />
+    <Content Include="ZonaGC\audio\player.swf" />
+    <Content Include="ZonaGC\audio\singlemp3player.swf" />
+    <Content Include="ZonaGC\audio\sound.mp3" />
+    <Content Include="ZonaGC\audio\swfobject.js" />
+    <Content Include="ZonaGC\audio\TheFlintstones.mp3" />
+    <Content Include="ZonaGC\audio\Upload.aspx" />
+    <Content Include="ZonaGC\audio\WebForm1.aspx" />
+    <Content Include="ZonaGC\audio\yt.swf" />
+    <Content Include="ZonaGC\cursos\WebForm1.aspx" />
+    <Content Include="ZonaGC\docs\Upload.aspx" />
+    <Content Include="ZonaGC\docs\WebForm1.aspx" />
+    <Content Include="ZonaGC\docs\upload1.aspx" />
+    <Content Include="ZonaGC\video\Acredite_em_voce.wmv" />
+    <Content Include="ZonaGC\video\Quem_mexeu_no_meu_queijo.wmv" />
+    <Content Include="ZonaGC\video\WebForm1.aspx" />
+    <Content Include="ZonaGC\WebForm1.aspx" />
+    <Content Include="ZonaPrincipal\MenuAjuda\WebForm1.aspx" />
+    <Content Include="ZonaFerramentas\BuscaCep\WebForm1.aspx" />
+    <Content Include="ZonaFerramentas\BuscaCep\WebForm2.aspx" />
+    <Content Include="ZonaPrincipal\MenuCadastros\Funcionarios\Cadastro\WebForm1.aspx" />
+    <Content Include="ZonaPrincipal\MenuCadastros\Funcionarios\Lista\WebForm1.aspx" />
+    <Content Include="ZonaPrincipal\MenuCadastros\Funcionarios\WebForm1.aspx" />
+    <Content Include="UsuarioCriar.aspx" />
+    <Content Include="css\choco.jpg" />
+    <Content Include="css\CriarUsuario.css" />
+    <Content Include="css\dropdown\default.advanced.css" />
+    <Content Include="css\dropdown\dropdown.css" />
+    <Content Include="css\dropdown\dropdown.limited.css" />
+    <Content Include="css\dropdown\dropdown.linear.columnar.css" />
+    <Content Include="css\dropdown\dropdown.linear.css" />
+    <Content Include="css\dropdown\dropdown.min.css" />
+    <Content Include="css\dropdown\dropdown.upward.css" />
+    <Content Include="css\dropdown\dropdown.vertical.css" />
+    <Content Include="css\dropdown\dropdown.vertical.rtl.css" />
+    <Content Include="css\dropdown\helper.css" />
+    <Content Include="css\dropdown\themes\adobe.com\default.advanced.css" />
+    <Content Include="css\dropdown\themes\adobe.com\default.css" />
+    <Content Include="css\dropdown\themes\adobe.com\helper.css" />
+    <Content Include="css\dropdown\themes\adobe.com\images\dropdown_pane.png" />
+    <Content Include="css\dropdown\themes\adobe.com\images\dropdown_pane_8bit.png" />
+    <Content Include="css\dropdown\themes\adobe.com\images\favicon.ico" />
+    <Content Include="css\dropdown\themes\adobe.com\images\grad1.png" />
+    <Content Include="css\dropdown\themes\adobe.com\images\icon.png" />
+    <Content Include="css\dropdown\themes\default\default.advanced.css" />
+    <Content Include="css\dropdown\themes\default\default.css" />
+    <Content Include="css\dropdown\themes\default\default.linear.css" />
+    <Content Include="css\dropdown\themes\default\default.ultimate.css" />
+    <Content Include="css\dropdown\themes\default\default.ultimate.linear.css" />
+    <Content Include="css\dropdown\themes\default\helper.css" />
+    <Content Include="css\dropdown\themes\default\images\grad1.png" />
+    <Content Include="css\dropdown\themes\default\images\grad2.png" />
+    <Content Include="css\dropdown\themes\default\images\nav-arrow-down-white.png" />
+    <Content Include="css\dropdown\themes\default\images\nav-arrow-down.png" />
+    <Content Include="css\dropdown\themes\default\images\nav-arrow-left-white.png" />
+    <Content Include="css\dropdown\themes\default\images\nav-arrow-left.png" />
+    <Content Include="css\dropdown\themes\default\images\nav-arrow-right-white.png" />
+    <Content Include="css\dropdown\themes\default\images\nav-arrow-right.png" />
+    <Content Include="css\dropdown\themes\default\images\nav-arrow-top-white.png" />
+    <Content Include="css\dropdown\themes\default\images\nav-arrow-top.png" />
+    <Content Include="css\dropdown\themes\default\images\pattern1.png" />
+    <Content Include="css\dropdown\themes\flickr.com\default.css" />
+    <Content Include="css\dropdown\themes\flickr.com\default.ultimate.css" />
+    <Content Include="css\dropdown\themes\flickr.com\default.ultimate.linear.css" />
+    <Content Include="css\dropdown\themes\flickr.com\default.ultimate.upward.css" />
+    <Content Include="css\dropdown\themes\flickr.com\helper.css" />
+    <Content Include="css\dropdown\themes\flickr.com\images\favicon.ico" />
+    <Content Include="css\dropdown\themes\flickr.com\images\icon.png" />
+    <Content Include="css\dropdown\themes\flickr.com\images\nav-arrow-down-on.png" />
+    <Content Include="css\dropdown\themes\flickr.com\images\nav-arrow-down-open.png" />
+    <Content Include="css\dropdown\themes\flickr.com\images\nav-arrow-down.png" />
+    <Content Include="css\dropdown\themes\flickr.com\images\nav-arrow-left-on.png" />
+    <Content Include="css\dropdown\themes\flickr.com\images\nav-arrow-left-open.png" />
+    <Content Include="css\dropdown\themes\flickr.com\images\nav-arrow-left.png" />
+    <Content Include="css\dropdown\themes\flickr.com\images\nav-arrow-right-on.png" />
+    <Content Include="css\dropdown\themes\flickr.com\images\nav-arrow-right-open.png" />
+    <Content Include="css\dropdown\themes\flickr.com\images\nav-arrow-right.png" />
+    <Content Include="css\dropdown\themes\flickr.com\images\nav-arrow-up-on.png" />
+    <Content Include="css\dropdown\themes\flickr.com\images\nav-arrow-up-open.png" />
+    <Content Include="css\dropdown\themes\flickr.com\images\nav-arrow-up.png" />
+    <Content Include="css\dropdown\themes\flickr.com\images\pattern1.png" />
+    <Content Include="css\dropdown\themes\flickr.com\images\pattern2.png" />
+    <Content Include="css\dropdown\themes\flickr.com\images\pattern3.png" />
+    <Content Include="css\dropdown\themes\lwis.celebrity\default.advanced.css" />
+    <Content Include="css\dropdown\themes\lwis.celebrity\default.css" />
+    <Content Include="css\dropdown\themes\lwis.celebrity\helper.css" />
+    <Content Include="css\dropdown\themes\lwis.celebrity\images\grad1.png" />
+    <Content Include="css\dropdown\themes\lwis.celebrity\images\grad2.png" />
+    <Content Include="css\dropdown\themes\lwis.celebrity\images\logo_lwis.png" />
+    <Content Include="css\dropdown\themes\lwis.celebrity\images\nav-arrow-down-white.png" />
+    <Content Include="css\dropdown\themes\lwis.celebrity\images\nav-arrow-down.png" />
+    <Content Include="css\dropdown\themes\lwis.celebrity\images\nav-arrow-left-white.png" />
+    <Content Include="css\dropdown\themes\lwis.celebrity\images\nav-arrow-left.png" />
+    <Content Include="css\dropdown\themes\lwis.celebrity\images\nav-arrow-right-white.png" />
+    <Content Include="css\dropdown\themes\lwis.celebrity\images\nav-arrow-right.png" />
+    <Content Include="css\dropdown\themes\lwis.celebrity\images\nav-arrow-top-white.png" />
+    <Content Include="css\dropdown\themes\lwis.celebrity\images\nav-arrow-top.png" />
+    <Content Include="css\dropdown\themes\lwis.celebrity\images\pattern1.png" />
+    <Content Include="css\dropdown\themes\lwis.celebrity\images\pattern2.png" />
+    <Content Include="css\dropdown\themes\mtv.com\default.advanced.css" />
+    <Content Include="css\dropdown\themes\mtv.com\default.css" />
+    <Content Include="css\dropdown\themes\mtv.com\default.ultimate.css" />
+    <Content Include="css\dropdown\themes\mtv.com\helper.css" />
+    <Content Include="css\dropdown\themes\mtv.com\images\comnav-arrowon.png" />
+    <Content Include="css\dropdown\themes\mtv.com\images\comnav-arrowover.png" />
+    <Content Include="css\dropdown\themes\mtv.com\images\comnav-arrowover2.png" />
+    <Content Include="css\dropdown\themes\mtv.com\images\favicon.ico" />
+    <Content Include="css\dropdown\themes\mtv.com\images\grad1.png" />
+    <Content Include="css\dropdown\themes\mtv.com\images\icon.png" />
+    <Content Include="css\dropdown\themes\mtv.com\images\nav-arrow-right.png" />
+    <Content Include="css\dropdown\themes\mtv.com\images\nav-arrow-right2.png" />
+    <Content Include="css\dropdown\themes\mtv.com\images\nav-sub-press.png" />
+    <Content Include="css\dropdown\themes\vimeo.com\default.advanced.css" />
+    <Content Include="css\dropdown\themes\vimeo.com\default.css" />
+    <Content Include="css\dropdown\themes\vimeo.com\helper.css" />
+    <Content Include="css\dropdown\themes\vimeo.com\images\bg_search-field.png" />
+    <Content Include="css\dropdown\themes\vimeo.com\images\box1-bottom.png" />
+    <Content Include="css\dropdown\themes\vimeo.com\images\box1-bottom2.png" />
+    <Content Include="css\dropdown\themes\vimeo.com\images\box1-outwards-top-right.png" />
+    <Content Include="css\dropdown\themes\vimeo.com\images\box1-top-left.png" />
+    <Content Include="css\dropdown\themes\vimeo.com\images\box1-top-right.png" />
+    <Content Include="css\dropdown\themes\vimeo.com\images\box1-top.png" />
+    <Content Include="css\dropdown\themes\vimeo.com\images\btn_search.png" />
+    <Content Include="css\dropdown\themes\vimeo.com\images\favicon.ico" />
+    <Content Include="css\dropdown\themes\vimeo.com\images\icon.png" />
+    <Content Include="css\dropdown\themes\vimeo.com\images\logo_lwis.png" />
+    <Content Include="css\dropdown\themes\vimeo.com\images\nav-arrow-down-green.png" />
+    <Content Include="css\dropdown\themes\vimeo.com\images\nav-arrow-down.png" />
+    <Content Include="css\dropdown\themes\vimeo.com\images\nav-arrow-left.png" />
+    <Content Include="css\dropdown\themes\vimeo.com\images\nav-arrow-right-green.png" />
+    <Content Include="css\dropdown\themes\vimeo.com\images\nav-arrow-right.png" />
+    <Content Include="css\dropdown\themes\vimeo.com\images\nav-arrow-top.png" />
+    <Content Include="css\dropdown\themes\vimeo.com\images\sun.png" />
+    <Content Include="css\dropdown\themes\_template\default.css" />
+    <Content Include="css\GridView.css" />
+    <Content Include="css\img\attach.png" />
+    <Content Include="css\img\bg-menu.png" />
+    <Content Include="css\img\cadastro.png" />
+    <Content Include="css\img\criarusuario.PNG" />
+    <Content Include="css\img\help.png" />
+    <Content Include="css\img\icobr.gif" />
+    <Content Include="css\img\chave.png" />
+    <Content Include="css\Info.css" />
+    <Content Include="css\Layout.css" />
+    <Content Include="css\Login.css" />
+    <Content Include="css\RoundedCorn\RoundedCornr.css" />
+    <Content Include="css\RoundedCorn\roundedcornr_488842_bl.png" />
+    <Content Include="css\RoundedCorn\roundedcornr_488842_br.png" />
+    <Content Include="css\RoundedCorn\roundedcornr_488842_tl.png" />
+    <Content Include="css\RoundedCorn\roundedcornr_488842_tr.png" />
+    <Content Include="css\RoundedCorn\roundedcornr_710912_bl.png" />
+    <Content Include="css\RoundedCorn\roundedcornr_710912_br.png" />
+    <Content Include="css\RoundedCorn\roundedcornr_710912_r.png" />
+    <Content Include="css\RoundedCorn\roundedcornr_710912_tl.png" />
+    <Content Include="css\RoundedCorn\roundedcornr_710912_tr.png" />
+    <Content Include="css\TabMenu.css" />
+    <Content Include="imagens\20_64x64.png" />
+    <Content Include="imagens\download.png" />
+    <Content Include="js\jquery\jquery.dropdown.js" />
+    <Content Include="js\jquery\jquery.js" />
+    <Content Include="js\relogio.js" />
+    <Content Include="js\silverlight.js" />
+    <Content Include="Logout.aspx" />
+    <Content Include="ZonaPrincipal\MenuCadastros\Pessoas\WebForm1.aspx" />
+    <Content Include="ZonaPrincipal\MenuEmail\SendMail\WebForm1.aspx" />
+    <Content Include="ZonaPrincipal\MenuEmail\SendMail\WebForm2.aspx" />
+    <Content Include="ZonaPrincipal\MenuEmail\SendSMS\WebForm1.aspx" />
+    <Content Include="ZonaPrincipal\MenuEmail\Webmail\WebForm1.aspx" />
+    <Content Include="ZonaControle\Favoritos\WebForm1.aspx" />
+    <Content Include="ZonaPrincipal\MenuCadastros\Funcionarios\Aniversariantes\WebForm1.aspx" />
+    <Content Include="ZonaPrincipal\MenuInformacao\WebForm1.aspx" />
+    <Content Include="ZonaPrincipal\MenuInstitucional\Documentos\Upload.aspx" />
+    <Content Include="ZonaPrincipal\MenuInstitucional\Documentos\WebForm1.aspx" />
+    <Content Include="ZonaPrincipal\MenuInstitucional\Empresa\WebForm1.aspx" />
+    <Content Include="ZonaPrincipal\MenuInformacao\Mundo\WebForm1.aspx" />
+    <Content Include="ZonaControle\Sistemas\WebForm1.aspx" />
+    <None Include="css\dropdown\themes\mmstec\images\Thumbs.db" />
+    <None Include="css\dropdown\Thumbs.db" />
+    <None Include="imagens\128x128\Thumbs.db" />
+    <None Include="imagens\64x64\Thumbs.db" />
+    <None Include="imagens\Thumbs.db" />
+    <None Include="imagerotator\Thumbs.db" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Web.config" />
+    <None Include="msg\erros.psd" />
+    <None Include="Service References\WSDL\Sms.wsdl" />
+    <None Include="ZonaGC\audio\singlemp3player.fla" />
+    <Content Include="Web.sitemap" />
+    <Content Include="ZonaControle\Usuarios\WebForm1.aspx" />
+    <Content Include="msg\404.aspx" />
+    <Content Include="UsuarioSenhaTrocar.aspx" />
+    <Content Include="ZonaControle\WebForm1.aspx" />
+    <Content Include="ZonaPrincipal\MenuInstitucional\Missao\WebForm1.aspx" />
+    <Content Include="ZonaPrincipal\MenuInstitucional\Visao\WebForm1.aspx" />
+    <Content Include="ZonaPrincipal\MenuInstitucional\WebForm1.aspx" />
+    <Content Include="ZonaPrincipal\MenuSuporte\Listar\WebForm1.aspx" />
+    <Content Include="ZonaPrincipal\MenuSuporte\Suporte\WebForm1.aspx" />
+    <Content Include="ZonaPrincipal\MenuSuporte\Website\WebForm1.aspx" />
+    <Content Include="ZonaRelatorios\compufour.png" />
+    <Content Include="ZonaRelatorios\prosoft.PNG" />
+    <Content Include="ZonaRelatorios\sic.png" />
+    <Content Include="ZonaRelatorios\smallsoft.png" />
+    <Content Include="ZonaRelatorios\WebForm1.aspx" />
+    <Content Include="ZonaSobre\ajuda.aspx" />
+    <Content Include="ZonaSobre\definicao.aspx" />
+    <Content Include="ZonaSobre\caracteristicas.aspx" />
+    <Content Include="ZonaSobre\novidades.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\WSDL\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="css\dropdown\themes\_template\images\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>60080</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

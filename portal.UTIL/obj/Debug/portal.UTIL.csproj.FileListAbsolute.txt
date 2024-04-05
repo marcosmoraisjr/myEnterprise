@@ -1,0 +1,9 @@
+L:\mmstec\PROJETOS\Solution Portal\portal.UTIL\bin\portal.UTIL.dll
+L:\mmstec\PROJETOS\Solution Portal\portal.UTIL\bin\portal.UTIL.pdb
+L:\mmstec\PROJETOS\Solution Portal\portal.UTIL\bin\portal.DAL.dll
+L:\mmstec\PROJETOS\Solution Portal\portal.UTIL\bin\portal.TAB.dll
+L:\mmstec\PROJETOS\Solution Portal\portal.UTIL\bin\portal.DAL.pdb
+L:\mmstec\PROJETOS\Solution Portal\portal.UTIL\bin\portal.TAB.pdb
+L:\mmstec\PROJETOS\Solution Portal\portal.UTIL\obj\Debug\ResolveAssemblyReference.cache
+L:\mmstec\PROJETOS\Solution Portal\portal.UTIL\obj\Debug\portal.UTIL.dll
+L:\mmstec\PROJETOS\Solution Portal\portal.UTIL\obj\Debug\portal.UTIL.pdb

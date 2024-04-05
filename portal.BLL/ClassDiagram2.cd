@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="portal.BLL.AUDITORIAS">
+    <Position X="0.5" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>EAQABECgAACAAAwASAASCAAAAAFAgAAACAAAAAAEAAA=</HashCode>
+      <FileName>BLL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="portal.BLL.DOWNLOADS">
+    <Position X="3.25" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>EAQAAGCAAAAAABgAAAAQAACAAAEAgAAACAAAAAAAAAA=</HashCode>
+      <FileName>BLL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="portal.BLL.EMPRESAS">
+    <Position X="6.5" Y="0.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>EAQACEGAAAEEAAgAAgASAFAAAgUAgAAADAAIIAgAAAA=</HashCode>
+      <FileName>BLL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="portal.BLL.ENDERECOS_BAIRRO">
+    <Position X="9.75" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>EAQAAECAAAAAAAgAAAAQAAAAAAEAgAAACAAAAAIAAAA=</HashCode>
+      <FileName>BLL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="portal.BLL.ENDERECOS_CIDADES">
+    <Position X="12.5" Y="7.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>EAQAAECAAAAAAAgAAAAQAAAAAAEQgAAACAAAAAAAAAA=</HashCode>
+      <FileName>BLL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="portal.BLL.ENDERECOS_LOGRADOUROS">
+    <Position X="3.25" Y="4.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>EAQAAFCEAAAAAAgAACAQAAAIAAEQgAAACAAAAAIAAAA=</HashCode>
+      <FileName>BLL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="portal.BLL.ENDERECOS_TIPO">
+    <Position X="9.75" Y="3.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>EAQAAECEAAAAAAgAAAAQAAAAAAEAgAAACAAAAAAAAAA=</HashCode>
+      <FileName>BLL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="portal.BLL.ENDERECOS_UF">
+    <Position X="3.25" Y="8.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>EAQAAECAAAACAAgAAAAQAAAAEAEAgAAACAAAAAAAAAA=</HashCode>
+      <FileName>BLL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="portal.BLL.FAVORITOS">
+    <Position X="12.5" Y="3.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>EAQAAECAAAAAAAgAAAAQAEEAAAEAgAAACAAAACAAAAA=</HashCode>
+      <FileName>BLL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="portal.BLL.FERIADOS">
+    <Position X="9.75" Y="7" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>EAQAAkCAAAAAAAgAAAAQAAQAAAEAgAAACABAAAAEAAA=</HashCode>
+      <FileName>BLL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="portal.BLL.MENU">
+    <Position X="0.5" Y="13" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>EAQEAECAAAAAAAgAAAAQAAAAAAHAgAAAiAAAAAAAAAA=</HashCode>
+      <FileName>BLL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="portal.BLL.PESSOAS">
+    <Position X="6.5" Y="6.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>EAQACECAALQAAAiBAAAQAIAEAAEAhQAACwAAAgABAAA=</HashCode>
+      <FileName>BLL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="portal.BLL.PESSOAS_CLIENTE">
+    <Position X="12.5" Y="0.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>MAQAAECAAAAAAAgAAAAQAAAAAAEAgQAACAAAAAAAAAA=</HashCode>
+      <FileName>BLL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="portal.BLL.PESSOAS_FISICA">
+    <Position X="10.75" Y="11" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>EgSAAMCIAAAAAAgAAJAQAAAUAAkQgQCASAAAABQAAIA=</HashCode>
+      <FileName>BLL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="portal.BLL.PESSOAS_JURIDICA">
+    <Position X="3.25" Y="12.25" Width="3" />
+    <TypeIdentifier>
+      <HashCode>EAQAAECAAAAAAAgAAAAQgAAAAAMAwQAACAAJABAAAgA=</HashCode>
+      <FileName>BLL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="portal.BLL.SISTEMAS">
+    <Position X="0.5" Y="5.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>EEQAAECAAAAAAAgAAAAQAEAAAAEAgQAACAAAAAAIAAA=</HashCode>
+      <FileName>BLL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="portal.BLL.SOLICITACOES">
+    <Position X="7" Y="12.75" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>EgQAAECBAAAAIAgAAAgQAAAAIgEAgEAACBAAAAAAgAA=</HashCode>
+      <FileName>BLL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="portal.BLL.SUPORTES">
+    <Position X="0.5" Y="9.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>EAQAAECAAgAAAAgACAAQAAAAEAGAgAAACAAAAAAAAAA=</HashCode>
+      <FileName>BLL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

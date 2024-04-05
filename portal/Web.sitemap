@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  
+  <siteMapNode url="~/default.aspx" title="Enterprise"  description="">
+
+    <!--/PRINCIPAL/-->
+    <siteMapNode url="~/" title="Principal"  description="" />
+    <siteMapNode url="~/Login.aspx" title="Entrar"  description="" />
+    <siteMapNode url="~/Logout.aspx" title="Sair"  description="" />
+    <siteMapNode url="~/UsuarioCriar.aspx" title="Registrar"  description="" />
+    <siteMapNode url="~/SenhaLembrar.aspx" title="Lembrar Senha"  description="" />
+    <siteMapNode url="~/SenhaTrocar.aspx" title="Alterar Senha"  description="" />
+    <siteMapNode url="~/Listar.aspx" title="Listar"  description="" />
+
+    <!--/NOTICIAS/-->
+    <siteMapNode url="~/MenuNoticias/WebForm1.aspx" title="Notícias"  description="">
+          <siteMapNode url="~/MenuNoticias/Mundo/WebForm1.aspx?dst=mundo" title="Mundo"  description="" />
+          <siteMapNode url="~/MenuNoticias/Mundo/WebForm1.aspx?dst=Economia" title="Economia"  description="" />
+          <siteMapNode url="~/MenuNoticias/Mundo/WebForm1.aspx?dst=Esporte" title="Esporte"  description="" />
+          <siteMapNode url="~/MenuNoticias/Mundo/WebForm1.aspx?dst=Tecnologia" title="Tecnologia"  description="" />
+      </siteMapNode>
+
+    <!--/FUNCIONARIOS /-->
+    <siteMapNode url="~/MenuFuncionarios/WebForm1.aspx" title="Funcionarios"  description="">
+      <siteMapNode url="~/MenuFuncionarios/Cadastro/WebForm1.aspx" title="Cadastro"  description="" />
+      <siteMapNode url="~/MenuFuncionarios/Lista/WebForm1.aspx" title="Listar"  description="" />
+      <siteMapNode url="~/MenuFuncionarios/Aniversariantes/WebForm1.aspx" title="Aniversariantes" description="" />
+    </siteMapNode>
+
+    <!--/COMUNICACAO/-->
+    <siteMapNode url="~/MenuComunicacao/WebForm1.aspx" title="Notícias"  description="">
+      <siteMapNode url="~/MenuComunicacao/SendMail/WebForm1.aspx" title="Enviar Email"  description="" />
+    </siteMapNode>
+
+    <!--/FERRAMENTAS/-->
+    <siteMapNode url="~/MenuFerramentas/WebForm1.aspx" title="Ferramentas"  description="">
+      <siteMapNode url="~/MenuFerramentas/BuscaCEP/WebForm1.aspx" title="Busca CEP"  description="" />
+    </siteMapNode>
+
+    <!--/RELATORIOS/-->
+    <siteMapNode url="~/MenuRelatorios/WebForm1.aspx" title="Ferramentas"  description="">
+      <siteMapNode url="~/MenuRelatorios/SICNET/WebForm1.aspx" title="Relatórios do SIC"  description="" />
+    </siteMapNode>
+    
+    <!--/CONFIGURACOES/-->
+    <siteMapNode url="~/MenuPainel/WebForm1.aspx" title="Painel de Controle"  description="">
+    </siteMapNode>
+    
+  </siteMapNode>
+  
+
+
+</siteMap>

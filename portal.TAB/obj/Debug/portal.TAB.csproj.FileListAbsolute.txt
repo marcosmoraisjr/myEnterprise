@@ -1,0 +1,15 @@
+L:\mmstec\PROJETOS\Solution Intranet\portal.TAB\bin\Debug\portal.TAB.dll
+L:\mmstec\PROJETOS\Solution Intranet\portal.TAB\bin\Debug\portal.TAB.pdb
+L:\mmstec\PROJETOS\Solution Intranet\portal.TAB\obj\Debug\ResolveAssemblyReference.cache
+L:\mmstec\PROJETOS\Solution Intranet\portal.TAB\obj\Debug\portal.TAB.dll
+L:\mmstec\PROJETOS\Solution Intranet\portal.TAB\obj\Debug\portal.TAB.pdb
+L:\mmstec\PROJETOS\Solution Portal\portal.TAB\bin\Debug\portal.TAB.dll
+L:\mmstec\PROJETOS\Solution Portal\portal.TAB\bin\Debug\portal.TAB.pdb
+L:\mmstec\PROJETOS\Solution Portal\portal.TAB\obj\Debug\ResolveAssemblyReference.cache
+L:\mmstec\PROJETOS\Solution Portal\portal.TAB\obj\Debug\portal.TAB.dll
+L:\mmstec\PROJETOS\Solution Portal\portal.TAB\obj\Debug\portal.TAB.pdb
+D:\mmstec\PROJETOS\Solution Portal\portal.TAB\bin\Debug\portal.TAB.dll
+D:\mmstec\PROJETOS\Solution Portal\portal.TAB\bin\Debug\portal.TAB.pdb
+D:\mmstec\PROJETOS\Solution Portal\portal.TAB\obj\Debug\ResolveAssemblyReference.cache
+D:\mmstec\PROJETOS\Solution Portal\portal.TAB\obj\Debug\portal.TAB.dll
+D:\mmstec\PROJETOS\Solution Portal\portal.TAB\obj\Debug\portal.TAB.pdb

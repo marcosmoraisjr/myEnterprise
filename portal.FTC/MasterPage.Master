@@ -1,0 +1,139 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="Portal.MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+
+<!--
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::                                                                      
+SOLUÇÃO DESENVOLVIDA POR: 
+- MARCOS MORAIS DE SOUSA
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+/--> 
+
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Page-Exit" content="blendTrans(Duration=0)" />
+	<style type="text/css" media="screen">@import url("css/estilo.css");</style>
+    <title>Tudo em um só lugar | Centro Virtual de Arquivos</title>
+    
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    
+</head>
+
+<body>
+    <br /><br /><br />
+    <form id="form1" runat="server">
+    <div>
+          <!-- PAGINA INICIO -->
+          <div id="pagina">
+        
+            <!--BORDAS INICIO--> 
+            <div id="_borda" class="bordaE"><!--x--></div> 
+            <div id="_borda" class="bordaD"><!--x--></div> 
+            <!--BORDAS FIM--> 
+            
+            <!--TOPO INICIO-->
+	        <div id="_topo" class="topo">
+		        <div class="logo">
+				    <img src="imagens/logoFTC.png" title="" alt="" />
+		        </div> 
+		        <div class="titulo">
+			        REPOSITÓRIO DE ARQUIVOS
+		        </div> 
+		        
+		        <!-- INICIO MENU -->
+                <br />
+                &nbsp;&nbsp;
+                <asp:LinkButton id="btnPrincipal" runat="server"
+                Text="Principal"  
+                CommandArgument="principal"  
+                ForeColor="#333333"  
+                Font-Name="verdana" Font-size="8pt"  
+                OnClick="PagerButtonClick" 
+                />
+                &nbsp;|&nbsp;  
+                <asp:LinkButton id="btnArquivos" runat="server"
+                Text="Arquivos"  
+                CommandArgument="arquivos"  
+                ForeColor="#333333"  
+                Font-Name="verdana" Font-size="8pt"  
+                OnClick="PagerButtonClick" 
+                />
+                &nbsp;|&nbsp;  
+                <asp:LinkButton id="LinkButtonCreditos" runat="server"
+                Text="Créditos"  
+                CommandArgument="creditos"  
+                ForeColor="#333333"  
+                Font-Name="verdana" Font-size="8pt"  
+                OnClick="PagerButtonClick" 
+                />
+                <asp:Panel ID="PanelAviso" runat="server" Visible="False">
+                <h1>Aviso: Este sistema funciona melhor no nevageador Google Chrome</h1>
+                </asp:Panel>
+                <!--
+                Cadastros | Estoque | Financeiro | Utilitários | Relatórios |Configurações | Sair /-->                        
+                <!--
+                <hr class="escondido" />
+                 <div style="height:auto;float:right;padding: 3px 6px 1px 0px; color:#fff; color:Black;" > 
+		            		
+        		            <asp:ImageButton 
+	                            Runat="server" 
+			                    ID="ImageButtonSair" 
+    			                ToolTip="Sair" 
+    			                ImageUrl="~/imagens/mini-cadeado.png" 
+                                PostBackUrl="~/login.aspx"/>
+                            
+			    </div> 
+               	
+   	            <script src="/App_Js/menu01.js" type="text/javascript"></script>
+	            <!-- <hr class="escondido" />-->
+	            <!-- FIM MENU -->
+				
+	            <div class="limpar"></div>
+	        </div>
+	        <!--TOPO FIM-->
+	        
+            <!-- TITULO BANNER INICIO -->
+            <div id="_banner">    
+			    <script type="text/javascript" src="imagerotator/swfobject.js"></script>
+			    <script type="text/javascript">
+				    var s1 = new SWFObject('imagerotator/imagerotator.swf','rotator','930','300','1');
+				    s1.addParam('allowfullscreen','false');
+				    s1.addParam('allowscriptaccess','always');
+				    s1.addParam('wmode','opaque');
+				    /* s1.addVariable('logo','imagerotator/logo_mmstec.jpg');*/
+				    s1.addVariable('transition','flash');  // (default, random e randomly)  ou (fade, bgfade, blocks, bubbles, circles, flash, fluids, lines ou slowfade)
+				    s1.addVariable('file','imagerotator/imagemCapa.xml');
+				    s1.addVariable('width','930');
+				    s1.addVariable('height','300');
+				    s1.addVariable('rotatetime','60');
+				    s1.addVariable('linkfromdisplay','true');
+				    s1.addVariable('shownavigation','true');
+				    s1.addVariable('imagerotator/expressinstall.swf');
+				    s1.write("_banner");
+			    </script>
+            </div>
+            
+            <!-- TITULO BANNER FIM -->
+            
+            <!-- CONTEUDO INICIO -->
+            <div id="_conteudo">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+		    </div>
+            <!-- CONTEUDO FIM -->        
+             
+            <!--RODAPE INICIO-->
+            <div id="_rodape">
+                Se desejar uma solução semelhante a esta, entre em contato. 73.8102.3484
+            </div>
+            <!--RODAPE FIM-->
+            
+        </div>
+        <!-- PAGINA FIM -->
+    </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,10 @@
+L:\mmstec\PROJETOS\Solution Portal\portalVO\bin\Debug\portalVO.dll
+L:\mmstec\PROJETOS\Solution Portal\portalVO\bin\Debug\portalVO.pdb
+L:\mmstec\PROJETOS\Solution Portal\portalVO\obj\Debug\ResolveAssemblyReference.cache
+L:\mmstec\PROJETOS\Solution Portal\portalVO\obj\Debug\portalVO.dll
+L:\mmstec\PROJETOS\Solution Portal\portalVO\obj\Debug\portalVO.pdb
+D:\mmstec\PROJETOS\Solution Portal\portalVO\bin\Debug\portalVO.dll
+D:\mmstec\PROJETOS\Solution Portal\portalVO\bin\Debug\portalVO.pdb
+D:\mmstec\PROJETOS\Solution Portal\portalVO\obj\Debug\ResolveAssemblyReference.cache
+D:\mmstec\PROJETOS\Solution Portal\portalVO\obj\Debug\portalVO.dll
+D:\mmstec\PROJETOS\Solution Portal\portalVO\obj\Debug\portalVO.pdb

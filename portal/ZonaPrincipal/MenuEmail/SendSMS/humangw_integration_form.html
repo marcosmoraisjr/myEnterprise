@@ -1,0 +1,147 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE> Human SMS </TITLE>
+<META http-equiv="Content-Type" content="text/html; charset=ISO-8859-9">
+<META NAME="Generator" CONTENT="">
+<META NAME="Author" CONTENT="">
+<META NAME="Keywords" CONTENT="">
+<META NAME="Description" CONTENT="">
+<STYLE TYPE="text/css">
+body, table, tr, td { font-family: Tahoma; color: #505050; font-size:11px; line-height: 1.5; }
+.filterButton{font-family: verdana;font-size: 10px;background: yellow;height:17px;border-width: 1px;border-color: #BCBC28;border-style: solid;}
+.filterButtonHover{font-family: verdana;font-size: 10px;background: orange;height:17px;border-width: 1px;border-color: #5B7EBF;border-style: solid;}
+.main {font-family: Tahoma, Verdana;font-size:11px;color: #505050;}
+
+</STYLE>
+
+</HEAD>
+
+<SCRIPT LANGUAGE="Javascript">
+<!--
+function highlightButton(s) {
+  if ("INPUT"==event.srcElement.tagName)
+  event.srcElement.className=s
+}
+
+function disableForm(theform) {
+  if (document.all || document.getElementById) {
+    for (i = 0; i < theform.length; i++) {
+      var tempobj = theform.elements[i];
+      if (tempobj.type.toLowerCase() == "submit") {
+         tempobj.disabled = true;
+         //tempobj.value = "Enviando...";
+      }
+    }
+    return true;
+  } else {
+    return false;
+  }
+}
+-->
+</SCRIPT>
+<BODY bgcolor="gray" background="http://www.human.com.br/system/background.jpg">
+<br>
+
+<div align="center"> 
+	<table border="0" bgcolor="white" width="500" cellpadding="0" cellspacing="0">
+	<tr>
+		<td align="left">
+			<div style="padding-top:6px;"></div>
+			<img src="logo_human_small.jpg" border="0" hspace="0" vspace="0"></td>
+		<td align="right" valign="bottom" style="padding-bottom:2px; padding-right:6px;">
+			
+		</td>
+	</tr>
+	<tr>
+	  <td colspan="2" bgcolor="#606060" style="height:20px;color:white;padding-right:6px;" align="right">
+			<b>Formulário para envio de SMS</b>
+	  </td>
+	</tr>
+	<tr>
+		<td colspan="2" style="padding-left:15px">
+
+
+<form name="importForm" method="post" action="https://system.human.com.br/GatewayIntegration/msgSms.do" class="nospace" enctype="application/x-www-form-urlencoded" onsubmit="return disableForm(this)" charset="ISO-8859-1">
+
+<input type="hidden" name="dispatch" value="send">
+<input type="hidden" name="callbackOption" value="2">
+
+  <table cellpadding="3" cellspacing="0" border="0" width="95%">
+    <tr>
+      <td colspan="3" class="filter"><br><b>Teste de Interface de Integração.</b></td>
+    </tr>
+    <tr>
+      <td colspan="3" class="main">
+          Informe os dados para envio.<br>
+		  <br>
+      </td>
+    </tr>
+    <tr>
+      <td width="10%" nowrap class="main">Account:</td>
+      <td width="20%" nowrap class="main">
+          <input type="edit" name="account" value="" class="main">
+      </td>
+      <td class="main">&nbsp;</td>
+    </tr>
+    <tr>
+      <td width="10%" nowrap class="main">Code:</td>
+      <td width="20%" nowrap class="main">
+          <input type="edit" name="code" value="" class="main">
+      </td>
+      <td class="main">&nbsp;</td>
+    </tr>
+    <tr>
+      <td width="10%" nowrap class="main">From:</td>
+      <td width="20%" nowrap class="main">
+          <input type="edit" name="from" value="" class="main">
+      </td>
+      <td class="main">&nbsp;</td>
+    </tr>
+    <tr>
+      <td width="10%" nowrap class="main">Schedule To:</td>
+      <td width="20%" nowrap class="main">
+          <input type="edit" name="schedule" value="" class="main">
+      </td>
+      <td class="main">&nbsp;</td>
+    </tr>
+    <tr>
+      <td width="10%" nowrap class="main">Message:</td>
+      <td width="20%" nowrap class="main">
+          <textarea name="msg" class="main" rows="5" cols="50"></textarea>
+      </td>
+      <td class="main">&nbsp;</td>
+    </tr>
+    <tr>
+      <td width="10%" nowrap class="main">To:</td>
+      <td width="20%" nowrap class="main">
+          <input type="edit" name="to" value="" class="main">
+      </td>
+      <td class="main">&nbsp;</td>
+    </tr>
+    <tr>
+      <td width="10%" nowrap class="main">Id:</td>
+      <td width="20%" nowrap class="main">
+          <input type="edit" name="id" value="" class="main">
+      </td>
+      <td class="main">&nbsp;</td>
+    </tr>
+    <tr>
+      <td colspan="3" class="filter">&nbsp;</td>
+    </tr>
+    <tr>
+      <td class="main">&nbsp;</td>
+      <td class="main"><input type="submit" value="Send!" onmouseover="highlightButton('filterButtonHover')" onmouseout="highlightButton('filterButton')" class="filterButton"></td>
+      <td class="main">&nbsp;</td>
+    </tr>
+  </table>
+</form>
+		
+		</td>
+	</tr>
+	</table>
+</div>
+</form>
+
+</BODY>
+</HTML>

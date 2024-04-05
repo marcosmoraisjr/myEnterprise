@@ -1,0 +1,5 @@
+L:\mmstec\PROJETOS\Intranet\Intranet\bin\Intranet.dll
+L:\mmstec\PROJETOS\Intranet\Intranet\bin\Intranet.pdb
+L:\mmstec\PROJETOS\Intranet\Intranet\obj\Debug\ResolveAssemblyReference.cache
+L:\mmstec\PROJETOS\Intranet\Intranet\obj\Debug\Intranet.dll
+L:\mmstec\PROJETOS\Intranet\Intranet\obj\Debug\Intranet.pdb
